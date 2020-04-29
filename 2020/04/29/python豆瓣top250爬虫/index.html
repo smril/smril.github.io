@@ -20,29 +20,35 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="smril&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="需要安装的库12import requestfrom bs4 import BeautifulSoup 简介本爬虫的目的主要是从豆瓣top250中爬取所有电影的排名、名称和简介，为此我们先去https:&#x2F;&#x2F;movie.douban.com&#x2F;top250 中观察源代码结构 1234567891011121314151617181920212223242526272829303132333435363">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python豆瓣top250爬虫“
+">
+<meta property="og:url" content="http://yoursite.com/2020/04/29/python%E8%B1%86%E7%93%A3top250%E7%88%AC%E8%99%AB/index.html">
 <meta property="og:site_name" content="smril&#39;s blog">
+<meta property="og:description" content="需要安装的库12import requestfrom bs4 import BeautifulSoup 简介本爬虫的目的主要是从豆瓣top250中爬取所有电影的排名、名称和简介，为此我们先去https:&#x2F;&#x2F;movie.douban.com&#x2F;top250 中观察源代码结构 1234567891011121314151617181920212223242526272829303132333435363">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-04-29T04:52:48.000Z">
+<meta property="article:modified_time" content="2020-04-29T05:26:50.880Z">
 <meta property="article:author" content="smril">
 <meta property="article:tag" content="smril">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/">
+<link rel="canonical" href="http://yoursite.com/2020/04/29/python%E8%B1%86%E7%93%A3top250%E7%88%AC%E8%99%AB/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>smril's blog</title>
+  <title>python豆瓣top250爬虫“
+ | smril's blog</title>
   
 
 
@@ -140,9 +146,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
@@ -158,11 +165,10 @@
       <meta itemprop="name" content="smril's blog">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/04/29/python%E8%B1%86%E7%93%A3top250%E7%88%AC%E8%99%AB/" class="post-title-link" itemprop="url">python豆瓣top250爬虫“
-</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          python豆瓣top250爬虫“
+
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -186,7 +192,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="需要安装的库"><a href="#需要安装的库" class="headerlink" title="需要安装的库"></a>需要安装的库</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> request</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br></pre></td></tr></table></figure>
+        <h3 id="需要安装的库"><a href="#需要安装的库" class="headerlink" title="需要安装的库"></a>需要安装的库</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> request</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br></pre></td></tr></table></figure>
 <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>本爬虫的目的主要是从豆瓣top250中爬取所有电影的排名、名称和简介，为此我们先去<br><a href="https://movie.douban.com/top250" target="_blank" rel="noopener">https://movie.douban.com/top250</a> 中观察源代码结构</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ol</span> <span class="attr">class</span>=<span class="string">"grid_view"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"pic"</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">em</span> <span class="attr">class</span>=<span class="string">""</span>&gt;</span>1<span class="tag">&lt;/<span class="name">em</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"https://movie.douban.com/subject/1292052/"</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">img</span> <span class="attr">width</span>=<span class="string">"100"</span> <span class="attr">alt</span>=<span class="string">"肖申克的救赎"</span> <span class="attr">src</span>=<span class="string">"https://img3.doubanio.com/view/photo/s_ratio_poster/public/p480747492.jpg"</span> <span class="attr">class</span>=<span class="string">""</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"info"</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"hd"</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"https://movie.douban.com/subject/1292052/"</span> <span class="attr">class</span>=<span class="string">""</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"title"</span>&gt;</span>肖申克的救赎<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">                                    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"title"</span>&gt;</span><span class="symbol">&amp;nbsp;</span>/<span class="symbol">&amp;nbsp;</span>The Shawshank Redemption<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"other"</span>&gt;</span><span class="symbol">&amp;nbsp;</span>/<span class="symbol">&amp;nbsp;</span>月黑高飞(港)  /  刺激1995(台)<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">                            <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"playable"</span>&gt;</span>[可播放]<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"bd"</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">""</span>&gt;</span></span><br><span class="line">                            导演: 弗兰克·德拉邦特 Frank Darabont<span class="symbol">&amp;nbsp;</span><span class="symbol">&amp;nbsp;</span><span class="symbol">&amp;nbsp;</span>主演: 蒂姆·罗宾斯 Tim Robbins /...<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">                            1994<span class="symbol">&amp;nbsp;</span>/<span class="symbol">&amp;nbsp;</span>美国<span class="symbol">&amp;nbsp;</span>/<span class="symbol">&amp;nbsp;</span>犯罪 剧情</span><br><span class="line">                        <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line">                        </span><br><span class="line">                        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"star"</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"rating5-t"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"rating_num"</span> <span class="attr">property</span>=<span class="string">"v:average"</span>&gt;</span>9.7<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;<span class="name">span</span> <span class="attr">property</span>=<span class="string">"v:best"</span> <span class="attr">content</span>=<span class="string">"10.0"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;<span class="name">span</span>&gt;</span>1996961人评价<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">                            <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"quote"</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"inq"</span>&gt;</span>希望让人自由。<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>看着一段代码，说明了影片的信息是藏在ol里的li里面，这次我们想要爬取的分别是<br>em里的排名信息，span class_=’title’里的名称信息和span class_=’inq’<br>里的简介信息，如果有需要，我们也可以爬取其他标签里的信息</p>
@@ -204,21 +210,23 @@
 <h5 id="接下来贴上全部的代码"><a href="#接下来贴上全部的代码" class="headerlink" title="接下来贴上全部的代码"></a>接下来贴上全部的代码</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">kv = &#123;<span class="string">'user-agent'</span>:<span class="string">'Mozilla/5.0'</span>&#125;</span><br><span class="line">print(<span class="string">"&#123;:^10&#125;\t&#123;:^16&#125;\t&#123;:^20&#125;"</span>.format(<span class="string">"排名"</span>,<span class="string">"电影名"</span>,<span class="string">"电影评语"</span>))</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getHTMLText</span><span class="params">(url)</span>:</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        r = requests.get(url, headers = kv)</span><br><span class="line">        r.raise_for_status()</span><br><span class="line">        r.encoding = r.apparent_encoding</span><br><span class="line">        <span class="keyword">return</span> r.text</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">""</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fillList</span><span class="params">(ulist, html)</span>:</span></span><br><span class="line">    soup = BeautifulSoup(html, <span class="string">"html.parser"</span>)</span><br><span class="line">    lis = soup.select(<span class="string">"ol li"</span>)</span><br><span class="line">    <span class="keyword">for</span> tr <span class="keyword">in</span> lis:</span><br><span class="line">        index = tr.find(<span class="string">'em'</span>).text</span><br><span class="line">        title = tr.find(<span class="string">'span'</span>, class_=<span class="string">'title'</span>).text</span><br><span class="line">        <span class="keyword">if</span> index == <span class="string">'241'</span> <span class="keyword">or</span> index == <span class="string">'247'</span> <span class="keyword">or</span> index == <span class="string">'245'</span>:</span><br><span class="line">            inq = <span class="string">" "</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            inq = tr.find(<span class="string">'span'</span>, class_=<span class="string">'inq'</span>).text</span><br><span class="line">        ulist.append([index, title, inq])</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">printList</span><span class="params">(ulist)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">25</span>):</span><br><span class="line">        u = ulist[i]</span><br><span class="line">        print(<span class="string">"&#123;:^10&#125;\t&#123;:^16&#125;\t&#123;:^20&#125;"</span>.format(u[<span class="number">0</span>],u[<span class="number">1</span>],u[<span class="number">2</span>]))</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    uinfo = []</span><br><span class="line">    url = <span class="string">"https://movie.douban.com/top250"</span></span><br><span class="line">    url1 = <span class="string">"https://movie.douban.com/top250"</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, <span class="number">250</span>, <span class="number">25</span>):</span><br><span class="line">        <span class="keyword">if</span> i == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">pass</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            url1 = url + <span class="string">"?start="</span> + str(i) + <span class="string">"&amp;filter="</span></span><br><span class="line">        html = getHTMLText(url1)</span><br><span class="line">        fillList(uinfo, html)</span><br><span class="line">        printList(uinfo)</span><br><span class="line">        uinfo = []</span><br><span class="line">main()</span><br></pre></td></tr></table></figure>
 <h5 id="最后展示下部分效果："><a href="#最后展示下部分效果：" class="headerlink" title="最后展示下部分效果："></a>最后展示下部分效果：</h5><p>排名              电影名                   电影评语<br>    1              肖申克的救赎               希望让人自由。<br>    2               霸王别姬                 风华绝代。<br>    3               阿甘正传               一部美国近现代史。<br>    4             这个杀手不太冷           怪蜀黍和小萝莉不得不说的故事。<br>    5               美丽人生                 最美的谎言。<br>    6              泰坦尼克号               失去的才是永恒的。<br>    7               千与千寻            最好的宫崎骏，最好的久石让。<br>    8              辛德勒的名单           拯救一个人，就是拯救整个世界。<br>    9               盗梦空间            诺兰给了我们一场无法盗取的梦。<br>    10            忠犬八公的故事            永远都不能忘记你所爱的人。<br>    11             海上钢琴师          每个人都要走一条自己坚定了的路，就算是粉身碎骨。<br>    12             楚门的世界          如果再也不能见到你，祝你早安，午安，晚安。<br>    13            三傻大闹宝莱坞            英俊版憨豆，高情商版谢耳朵。   </p>
 <h3 id="至此，我们的豆瓣top250电影爬虫就完成了"><a href="#至此，我们的豆瓣top250电影爬虫就完成了" class="headerlink" title="至此，我们的豆瓣top250电影爬虫就完成了"></a>至此，我们的豆瓣top250电影爬虫就完成了</h3>
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
+
+        
+
+
+        
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
@@ -271,6 +279,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#需要安装的库"><span class="nav-number">1.</span> <span class="nav-text">需要安装的库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">2.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码步骤"><span class="nav-number">3.</span> <span class="nav-text">代码步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#首先我们需要一个爬取网页内容的函数"><span class="nav-number">3.0.1.</span> <span class="nav-text">首先我们需要一个爬取网页内容的函数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#其次我们需要一个解析HTML源码的函数，把这些信息从代码中找出来"><span class="nav-number">3.0.2.</span> <span class="nav-text">其次我们需要一个解析HTML源码的函数，把这些信息从代码中找出来</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#下来是输出函数，用于将列表里的电影信息输出"><span class="nav-number">3.0.3.</span> <span class="nav-text">下来是输出函数，用于将列表里的电影信息输出</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#最后，是我们的主函数"><span class="nav-number">3.0.4.</span> <span class="nav-text">最后，是我们的主函数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#接下来贴上全部的代码"><span class="nav-number">3.0.5.</span> <span class="nav-text">接下来贴上全部的代码</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#最后展示下部分效果："><span class="nav-number">3.0.6.</span> <span class="nav-text">最后展示下部分效果：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#至此，我们的豆瓣top250电影爬虫就完成了"><span class="nav-number">4.</span> <span class="nav-text">至此，我们的豆瓣top250电影爬虫就完成了</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
