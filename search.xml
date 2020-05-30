@@ -200,6 +200,10 @@
 <h3 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h3><p>自此，在稍微调整下细微的差错，加上自己喜欢的CSS样式，这个鸡肋的实验室设备管理系统就做好了，因为课设时间有些紧张，而且还有其他的课程考试，好多想法因为怕出错都没有实验，只做出了最简单的题目所要求的功能，而且没有打磨细节，虽然如此，仍然可以感觉到thinkphp是一款比较优秀的框架，以后一定会深入的学习它。</p>
 <p>终于完了，泪目(T^T)。最后放张E-R图来结束这个学习记录(不过好像E-R图要一开始画好耶)</p>
 <p><img src="/2020/05/30/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%E5%85%AD-%E5%AE%8C/ER.png" alt="E-R图"></p>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p><a href="https://www.bilibili.com/video/BV1Vx411V7fE" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1Vx411V7fE</a> 千锋教育ThinkPHP5.0框架全方位解读与实战</p>
+<p><a href="https://www.bilibili.com/video/BV17J411K7Zd" target="_blank" rel="noopener">https://www.bilibili.com/video/BV17J411K7Zd</a> 李炎恢ThinkPHP5.1PHP框架十天精品课堂</p>
+<p><a href="https://www.freedgo.com/erd-index.html" target="_blank" rel="noopener">https://www.freedgo.com/erd-index.html</a> E-R图在线绘制</p>
+<p>thinkphp5.0官方文档</p>
 ]]></content>
       <categories>
         <category>数据库课程设计</category>
