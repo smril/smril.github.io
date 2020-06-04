@@ -16,27 +16,27 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"smril.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="实现登录验证我们按照跳转的方式，将登录的用户直接跳转到主界面，即可实现登录功能，但是如果有人没有登录，但是他知道我们主界面的路由，他也一样可以进入主界面，所以我们通过登录验证的方法来限制这样的访问。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据库课程设计学习记录四">
-<meta property="og:url" content="http://yoursite.com/2020/05/23/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%E5%9B%9B/index.html">
+<meta property="og:url" content="https://smril.com/2020/05/23/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%E5%9B%9B/index.html">
 <meta property="og:site_name" content="smril&#39;s blog">
 <meta property="og:description" content="实现登录验证我们按照跳转的方式，将登录的用户直接跳转到主界面，即可实现登录功能，但是如果有人没有登录，但是他知道我们主界面的路由，他也一样可以进入主界面，所以我们通过登录验证的方法来限制这样的访问。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://yoursite.com/2020/05/23/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%E5%9B%9B/%E7%99%BB%E5%BD%95%E6%88%90%E5%8A%9F.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/23/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%E5%9B%9B/%E4%B8%BB%E7%95%8C%E9%9D%A2.png">
-<meta property="og:image" content="http://yoursite.com/2020/05/23/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%E5%9B%9B/%E8%AF%B7%E5%85%88%E7%99%BB%E5%BD%95.png">
+<meta property="og:image" content="https://smril.com/2020/05/23/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%E5%9B%9B/%E7%99%BB%E5%BD%95%E6%88%90%E5%8A%9F.png">
+<meta property="og:image" content="https://smril.com/2020/05/23/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%E5%9B%9B/%E4%B8%BB%E7%95%8C%E9%9D%A2.png">
+<meta property="og:image" content="https://smril.com/2020/05/23/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%E5%9B%9B/%E8%AF%B7%E5%85%88%E7%99%BB%E5%BD%95.png">
 <meta property="article:published_time" content="2020-05-23T01:54:42.000Z">
 <meta property="article:modified_time" content="2020-05-23T02:39:29.321Z">
 <meta property="article:author" content="smril">
 <meta property="article:tag" content="smril">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/05/23/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%E5%9B%9B/%E7%99%BB%E5%BD%95%E6%88%90%E5%8A%9F.png">
+<meta name="twitter:image" content="https://smril.com/2020/05/23/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%E5%9B%9B/%E7%99%BB%E5%BD%95%E6%88%90%E5%8A%9F.png">
 
-<link rel="canonical" href="http://yoursite.com/2020/05/23/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%E5%9B%9B/">
+<link rel="canonical" href="https://smril.com/2020/05/23/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%E5%9B%9B/">
 
 
 <script id="page-configurations">
@@ -193,7 +193,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/23/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%E5%9B%9B/">
+    <link itemprop="mainEntityOfPage" href="https://smril.com/2020/05/23/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%E5%9B%9B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/head.png">
