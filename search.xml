@@ -360,4 +360,18 @@
         <category>数据库课程设计</category>
       </categories>
   </entry>
+  <entry>
+    <title>hexo d后撤销，再次上传时失败解决办法</title>
+    <url>/2020/06/12/hexo-d%E5%90%8E%E6%92%A4%E9%94%80%EF%BC%8C%E5%86%8D%E6%AC%A1%E4%B8%8A%E4%BC%A0%E6%97%B6%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
+    <content><![CDATA[<p>在博客里添加下载功能，只需要在source中添加一个download文件夹，将文件放在里面，然后在博客中写：<br>[显示信息](\download\文件名) 即可</p>
+<a id="more"></a>
+<p>但是如果上传中途失败或者撤销了，再次上传的时候有可能会报错，上网找了好久都没有找到解决办法，最后发现此时的hexo博客文件夹的大小与上传前备份的大小有很大的差异，刚好就是我没有上传成功的文件的大小，在finder中比较现在和备份的文件夹，发下大小都一致，说明是有一个隐藏的文件，我们只需要替换这个文件就好了。</p>
+<p>进入终端root模式，来到hexo博客目录下，ls展示,输入 du -sh ./文件名查看文件大小，最终得知罪魁祸首是.deploy_git,将这个文件用备份的替换掉即可</p>
+<p>mv 备份文件 博客目录</p>
+<p>完</p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+  </entry>
 </search>
