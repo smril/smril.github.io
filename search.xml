@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>hexo d后撤销，再次上传时失败解决办法</title>
+    <url>/2020/06/12/hexo-d%E5%90%8E%E6%92%A4%E9%94%80%EF%BC%8C%E5%86%8D%E6%AC%A1%E4%B8%8A%E4%BC%A0%E6%97%B6%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
+    <content><![CDATA[<p>在博客里添加下载功能，只需要在source中添加一个download文件夹，将文件放在里面，然后在博客中写：<br>[显示信息](\download\文件名) 即可</p>
+<a id="more"></a>
+<p>但是如果上传中途失败或者撤销了，再次上传的时候有可能会报错，上网找了好久都没有找到解决办法，最后发现此时的hexo博客文件夹的大小与上传前备份的大小有很大的差异，刚好就是我没有上传成功的文件的大小，在finder中比较现在和备份的文件夹，发下大小都一致，说明是有一个隐藏的文件，我们只需要替换这个文件就好了。</p>
+<p>进入终端root模式，来到hexo博客目录下，ls展示,输入 du -sh ./文件名查看文件大小，最终得知罪魁祸首是.deploy_git,将这个文件用备份的替换掉即可</p>
+<p><img src="/2020/06/12/hexo-d%E5%90%8E%E6%92%A4%E9%94%80%EF%BC%8C%E5%86%8D%E6%AC%A1%E4%B8%8A%E4%BC%A0%E6%97%B6%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/ls.png" alt="目录展示"></p>
+<p>mv 备份文件 博客目录</p>
+<p>完</p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+  </entry>
+  <entry>
     <title>python豆瓣top250爬虫
 </title>
     <url>/2020/04/29/python%E8%B1%86%E7%93%A3top250%E7%88%AC%E8%99%AB/</url>
@@ -73,6 +88,40 @@
 ]]></content>
       <categories>
         <category>python</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>放几张画的画^~^</title>
+    <url>/2020/05/04/%E6%94%BE%E5%87%A0%E5%BC%A0%E7%94%BB%E7%9A%84%E7%94%BB/</url>
+    <content><![CDATA[<h3 id="放几张画，记录一下"><a href="#放几张画，记录一下" class="headerlink" title="放几张画，记录一下"></a>放几张画，记录一下</h3><p>我的P站ID：14255525<br>昵称：smril</p>
+<a id="more"></a>
+
+<h5 id="下面是最近画的三幅画～"><a href="#下面是最近画的三幅画～" class="headerlink" title="下面是最近画的三幅画～"></a>下面是最近画的三幅画～</h5><p>p站地址：<a href="https://www.pixiv.net/artworks/81241591" target="_blank" rel="noopener">https://www.pixiv.net/artworks/81241591</a><br>p站地址：<a href="https://www.pixiv.net/artworks/79442962" target="_blank" rel="noopener">https://www.pixiv.net/artworks/79442962</a><br>p站地址：<a href="https://www.pixiv.net/artworks/76539307" target="_blank" rel="noopener">https://www.pixiv.net/artworks/76539307</a></p>
+<p><img src="/2020/05/04/%E6%94%BE%E5%87%A0%E5%BC%A0%E7%94%BB%E7%9A%84%E7%94%BB/%E4%B8%8D%E7%9F%A5%E7%81%AB.jpg" alt="不知火"></p>
+<p><img src="/2020/05/04/%E6%94%BE%E5%87%A0%E5%BC%A0%E7%94%BB%E7%9A%84%E7%94%BB/%E5%BE%A1%E5%9D%82%E7%BE%8E%E7%90%B4.jpg" alt="御坂美琴"></p>
+<p><img src="/2020/05/04/%E6%94%BE%E5%87%A0%E5%BC%A0%E7%94%BB%E7%9A%84%E7%94%BB/%E5%88%9D%E9%9F%B3%E6%9C%AA%E6%9D%A5.jpg" alt="初音未来"></p>
+]]></content>
+      <categories>
+        <category>painting</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>数据库课程设计学习记录一</title>
+    <url>/2020/05/14/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%E4%B8%80/</url>
+    <content><![CDATA[<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>实践内容 实验室设备管理系统<br>建立一个实验室设备管理系统, 编写应用程序完成系统开发。</p>
+<a id="more"></a>
+<ol>
+<li>建立基本表：<br>设备表（设备号，设备名称，价格，配置，厂家名称，出厂日期，实验室名）<br>故障设备信息表（故障序号，故障名称，设备号，故障日期，故障信息，经手人）<br>维修表（维修号，设备号，故障序号，维修日期，维修内容，改变配置，维修金额，维修人，备注）<br>用户表（用户号，用户名，密码，用户类别）</li>
+<li>要求实现以下功能：<br>（1）登录功能<br>  系统有四类用户：一般用户、管理员、维修员、系统管理员<br>（2）设备基本信息管理<br>  要求：设备基本信息查询，单个/批量设备添加，单个/批量设备信息修改，单个/批量设备信息删除<br>（3）故障设备信息管理<br> 要求：故障查询，添加故障设备，修改故障设备信息，删除故障设备信息；维修信息查询，维修信息添加<br>（4）用户管理<br>  要求：用户信息查询，用户注册，用户信息维护，用户权限修改<br>（5）报表信息管理<br>（6) 系统维护</li>
+</ol>
+<h3 id="准备环境"><a href="#准备环境" class="headerlink" title="准备环境"></a>准备环境</h3><p>这次为了避免出错，而且为了和更多的教程契合，所以我用了Windows系统，其中需要准备的环境是wampserver和thinkphp，其中wampserver是一个网页服务器集成开发环境，它包含了apache，php,mySQL，所以以上都不用单独安装，如果以前安装过某些网页服务器或数据库，如IIS和mySQL，可能会造成冲突报错，把以前安装过的停掉就好了。</p>
+<p>wampserver下载连接：<a href="http://www.wampserver.com" target="_blank" rel="noopener">http://www.wampserver.com</a> tips:这个要科学上网<br>thinkphp下载连接：<a href="http://www.thinkphp.cn" target="_blank" rel="noopener">http://www.thinkphp.cn</a></p>
+<p>将thinkphp整个文件解压到wamp64目录下的www目录里，单独有一个文件夹用来放thinkphp解压内容。</p>
+<p>最终的效果是wampserver图标变绿，即三个服务都已经开启，在浏览器里输入localhost，就可以看到主界面，点击放thinkphp的文件夹，会看到类似FTP服务器的界面，点击public，看到“十年磨一剑，高性能的#¥%”字样，就说明准备工作成功了。</p>
+<p>这里最大的问题是wampserver怎么变绿，大多数问题即为80端口被占，或者原来的mysql服务没有关闭，80端口被占可以在httpd.conf里更改监听端口，但是注意更改后localhost后要加:端口号，例：localhost:8080，在点击thinkphp文件夹后，默认是不加端口号的，仍然要手动添加。关闭原来的mysql服务，可以右击我的电脑-管理-服务，找到mysql，停止即可。</p>
+]]></content>
+      <categories>
+        <category>数据库课程设计</category>
       </categories>
   </entry>
   <entry>
@@ -318,21 +367,6 @@
       </categories>
   </entry>
   <entry>
-    <title>放几张画的画^~^</title>
-    <url>/2020/05/04/%E6%94%BE%E5%87%A0%E5%BC%A0%E7%94%BB%E7%9A%84%E7%94%BB/</url>
-    <content><![CDATA[<h3 id="放几张画，记录一下"><a href="#放几张画，记录一下" class="headerlink" title="放几张画，记录一下"></a>放几张画，记录一下</h3><p>我的P站ID：14255525<br>昵称：smril</p>
-<a id="more"></a>
-
-<h5 id="下面是最近画的三幅画～"><a href="#下面是最近画的三幅画～" class="headerlink" title="下面是最近画的三幅画～"></a>下面是最近画的三幅画～</h5><p>p站地址：<a href="https://www.pixiv.net/artworks/81241591" target="_blank" rel="noopener">https://www.pixiv.net/artworks/81241591</a><br>p站地址：<a href="https://www.pixiv.net/artworks/79442962" target="_blank" rel="noopener">https://www.pixiv.net/artworks/79442962</a><br>p站地址：<a href="https://www.pixiv.net/artworks/76539307" target="_blank" rel="noopener">https://www.pixiv.net/artworks/76539307</a></p>
-<p><img src="/2020/05/04/%E6%94%BE%E5%87%A0%E5%BC%A0%E7%94%BB%E7%9A%84%E7%94%BB/%E4%B8%8D%E7%9F%A5%E7%81%AB.jpg" alt="不知火"></p>
-<p><img src="/2020/05/04/%E6%94%BE%E5%87%A0%E5%BC%A0%E7%94%BB%E7%9A%84%E7%94%BB/%E5%BE%A1%E5%9D%82%E7%BE%8E%E7%90%B4.jpg" alt="御坂美琴"></p>
-<p><img src="/2020/05/04/%E6%94%BE%E5%87%A0%E5%BC%A0%E7%94%BB%E7%9A%84%E7%94%BB/%E5%88%9D%E9%9F%B3%E6%9C%AA%E6%9D%A5.jpg" alt="初音未来"></p>
-]]></content>
-      <categories>
-        <category>painting</category>
-      </categories>
-  </entry>
-  <entry>
     <title>生日纪念～</title>
     <url>/2020/05/18/%E7%BA%AA%E5%BF%B5%E4%B8%8B%E8%87%AA%E5%B7%B1%E7%9A%8419%E5%B2%81%EF%BD%9E/</url>
     <content><![CDATA[<h3 id="生日画的贺图……-o"><a href="#生日画的贺图……-o" class="headerlink" title="生日画的贺图……^o^"></a>生日画的贺图……<em>^o^</em></h3><a id="more"></a>
@@ -342,37 +376,32 @@
 ]]></content>
   </entry>
   <entry>
-    <title>数据库课程设计学习记录一</title>
-    <url>/2020/05/14/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%E4%B8%80/</url>
-    <content><![CDATA[<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>实践内容 实验室设备管理系统<br>建立一个实验室设备管理系统, 编写应用程序完成系统开发。</p>
+    <title>进程调度模拟程序设计</title>
+    <url>/2020/06/13/%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6%E6%A8%A1%E6%8B%9F%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</url>
+    <content><![CDATA[<h3 id="进程调度模拟程序设计"><a href="#进程调度模拟程序设计" class="headerlink" title="进程调度模拟程序设计"></a>进程调度模拟程序设计</h3><p>题目简单来说，就是模拟按优先数调度算法实现处理器调度的程序，详细题目如下：</p>
 <a id="more"></a>
-<ol>
-<li>建立基本表：<br>设备表（设备号，设备名称，价格，配置，厂家名称，出厂日期，实验室名）<br>故障设备信息表（故障序号，故障名称，设备号，故障日期，故障信息，经手人）<br>维修表（维修号，设备号，故障序号，维修日期，维修内容，改变配置，维修金额，维修人，备注）<br>用户表（用户号，用户名，密码，用户类别）</li>
-<li>要求实现以下功能：<br>（1）登录功能<br>  系统有四类用户：一般用户、管理员、维修员、系统管理员<br>（2）设备基本信息管理<br>  要求：设备基本信息查询，单个/批量设备添加，单个/批量设备信息修改，单个/批量设备信息删除<br>（3）故障设备信息管理<br> 要求：故障查询，添加故障设备，修改故障设备信息，删除故障设备信息；维修信息查询，维修信息添加<br>（4）用户管理<br>  要求：用户信息查询，用户注册，用户信息维护，用户权限修改<br>（5）报表信息管理<br>（6) 系统维护</li>
-</ol>
-<h3 id="准备环境"><a href="#准备环境" class="headerlink" title="准备环境"></a>准备环境</h3><p>这次为了避免出错，而且为了和更多的教程契合，所以我用了Windows系统，其中需要准备的环境是wampserver和thinkphp，其中wampserver是一个网页服务器集成开发环境，它包含了apache，php,mySQL，所以以上都不用单独安装，如果以前安装过某些网页服务器或数据库，如IIS和mySQL，可能会造成冲突报错，把以前安装过的停掉就好了。</p>
-<p>wampserver下载连接：<a href="http://www.wampserver.com" target="_blank" rel="noopener">http://www.wampserver.com</a> tips:这个要科学上网<br>thinkphp下载连接：<a href="http://www.thinkphp.cn" target="_blank" rel="noopener">http://www.thinkphp.cn</a></p>
-<p>将thinkphp整个文件解压到wamp64目录下的www目录里，单独有一个文件夹用来放thinkphp解压内容。</p>
-<p>最终的效果是wampserver图标变绿，即三个服务都已经开启，在浏览器里输入localhost，就可以看到主界面，点击放thinkphp的文件夹，会看到类似FTP服务器的界面，点击public，看到“十年磨一剑，高性能的#¥%”字样，就说明准备工作成功了。</p>
-<p>这里最大的问题是wampserver怎么变绿，大多数问题即为80端口被占，或者原来的mysql服务没有关闭，80端口被占可以在httpd.conf里更改监听端口，但是注意更改后localhost后要加:端口号，例：localhost:8080，在点击thinkphp文件夹后，默认是不加端口号的，仍然要手动添加。关闭原来的mysql服务，可以右击我的电脑-管理-服务，找到mysql，停止即可。</p>
-]]></content>
-      <categories>
-        <category>数据库课程设计</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>hexo d后撤销，再次上传时失败解决办法</title>
-    <url>/2020/06/12/hexo-d%E5%90%8E%E6%92%A4%E9%94%80%EF%BC%8C%E5%86%8D%E6%AC%A1%E4%B8%8A%E4%BC%A0%E6%97%B6%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
-    <content><![CDATA[<p>在博客里添加下载功能，只需要在source中添加一个download文件夹，将文件放在里面，然后在博客中写：<br>[显示信息](\download\文件名) 即可</p>
-<a id="more"></a>
-<p>但是如果上传中途失败或者撤销了，再次上传的时候有可能会报错，上网找了好久都没有找到解决办法，最后发现此时的hexo博客文件夹的大小与上传前备份的大小有很大的差异，刚好就是我没有上传成功的文件的大小，在finder中比较现在和备份的文件夹，发下大小都一致，说明是有一个隐藏的文件，我们只需要替换这个文件就好了。</p>
-<p>进入终端root模式，来到hexo博客目录下，ls展示,输入 du -sh ./文件名查看文件大小，最终得知罪魁祸首是.deploy_git,将这个文件用备份的替换掉即可</p>
-<p><img src="/2020/06/12/hexo-d%E5%90%8E%E6%92%A4%E9%94%80%EF%BC%8C%E5%86%8D%E6%AC%A1%E4%B8%8A%E4%BC%A0%E6%97%B6%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/ls.png" alt="目录展示"></p>
-<p>mv 备份文件 博客目录</p>
+
+<p><a href="/download/进程调度模拟程序设计.docx">进程调度模拟程序设计题目</a></p>
+<p>做这个题目，比较方便的是用链表，而进程可以用如下结构体表示：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">PCB</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> name;</span><br><span class="line">    PCB *next;</span><br><span class="line">    <span class="keyword">int</span> time;</span><br><span class="line">    <span class="keyword">int</span> prior;</span><br><span class="line">    <span class="keyword">int</span> status;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>在插入的时候，我们先按照大小查找到要插入的位置，即该节点(进程)的优先级比该位置的要大，就插入到该位置的前面：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">PCBlist::insert</span><span class="params">(PCB p)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    PCB *a = <span class="keyword">new</span> PCB;</span><br><span class="line">    a-&gt;name = p.name;</span><br><span class="line">    a-&gt;time = p.time;</span><br><span class="line">    a-&gt;prior = p.prior;</span><br><span class="line">    a-&gt;status = p.status;</span><br><span class="line">    <span class="keyword">if</span>(!head-&gt;next)</span><br><span class="line">    &#123;</span><br><span class="line">        head-&gt;next = a;</span><br><span class="line">        a-&gt;next = <span class="literal">nullptr</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        PCB *b = head-&gt;next;</span><br><span class="line">        PCB *c = head;</span><br><span class="line">        <span class="keyword">for</span>(; b; )</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(a-&gt;prior &gt;= b-&gt;prior)</span><br><span class="line">            &#123;</span><br><span class="line">                c-&gt;next = a;</span><br><span class="line">                a-&gt;next = b;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            c = c-&gt;next;</span><br><span class="line">            b = b-&gt;next;</span><br><span class="line">            <span class="keyword">if</span>(!b)</span><br><span class="line">            &#123;</span><br><span class="line">                c-&gt;next = a;</span><br><span class="line">                a-&gt;next = <span class="literal">nullptr</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>所以在初始化中，我们就得到了一条完整的按照优先级排列的进程链表，我们只需要每次取出队首的进程，执行(优先级和时间-1)，然后把它从这个链表中拿出，再重新按照优先级插入即可。当运行时间为0时，我们就可以不再重新插入它，而是直接输出状态为E，表示执行完毕：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">run</span><span class="params">(PCBlist &amp;T)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    PCB *a = T.head;</span><br><span class="line">    PCB *ne;</span><br><span class="line">    a-&gt;next-&gt;time = a-&gt;next-&gt;time - <span class="number">1</span>;</span><br><span class="line">    a-&gt;next-&gt;prior = a-&gt;next-&gt;prior - <span class="number">1</span>;</span><br><span class="line">    ne = a-&gt;next;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"此时正在运行P"</span> &lt;&lt; ne-&gt;name &lt;&lt; <span class="string">"程序"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"程序的运行时间还剩"</span> &lt;&lt; ne-&gt;time &lt;&lt;  <span class="built_in">endl</span>;</span><br><span class="line">    a-&gt;next = ne-&gt;next;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(ne-&gt;time)</span><br><span class="line">        T.insert(*ne);</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"进程P"</span> &lt;&lt; ne-&gt;name &lt;&lt; <span class="string">"运行结束"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------------------------"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"进程名：P"</span> &lt;&lt; ne-&gt;name &lt;&lt; <span class="string">' '</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"优先级："</span> &lt;&lt; ne-&gt;prior &lt;&lt; <span class="string">' '</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"剩余运行时间："</span> &lt;&lt; ne-&gt;time &lt;&lt; <span class="string">' '</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"状态：E"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------------------------"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在每次run，也就是每次执行一个进程时，我们将链表输出，以查看当时的所以未执行完的进程的状态：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">PCBlist::show</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    PCB *a = head-&gt;next;</span><br><span class="line">    <span class="keyword">for</span>(; a; a = a-&gt;next)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------------------------"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"进程名：P"</span> &lt;&lt; a-&gt;name &lt;&lt; <span class="string">' '</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"优先级："</span> &lt;&lt; a-&gt;prior &lt;&lt; <span class="string">' '</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"剩余运行时间："</span> &lt;&lt; a-&gt;time &lt;&lt; <span class="string">' '</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"状态：R"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------------------------"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span>(T.head-&gt;next)</span><br><span class="line">    &#123;<span class="built_in">run</span>(T);</span><br><span class="line">    T.show();&#125;</span><br></pre></td></tr></table></figure>
+
+<p>下面放上全部的代码和执行结果：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">PCB</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> name;</span><br><span class="line">    PCB *next;</span><br><span class="line">    <span class="keyword">int</span> time;</span><br><span class="line">    <span class="keyword">int</span> prior;</span><br><span class="line">    <span class="keyword">int</span> status;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">PCBlist</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    PCB *head;</span><br><span class="line">    PCBlist();</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">insert</span><span class="params">(PCB p)</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">show</span><span class="params">()</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line">PCBlist::PCBlist()</span><br><span class="line">&#123;</span><br><span class="line">    head = <span class="keyword">new</span> PCB;</span><br><span class="line">    head-&gt;next = <span class="literal">nullptr</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">PCBlist::insert</span><span class="params">(PCB p)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    PCB *a = <span class="keyword">new</span> PCB;</span><br><span class="line">    a-&gt;name = p.name;</span><br><span class="line">    a-&gt;time = p.time;</span><br><span class="line">    a-&gt;prior = p.prior;</span><br><span class="line">    a-&gt;status = p.status;</span><br><span class="line">    <span class="keyword">if</span>(!head-&gt;next)</span><br><span class="line">    &#123;</span><br><span class="line">        head-&gt;next = a;</span><br><span class="line">        a-&gt;next = <span class="literal">nullptr</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        PCB *b = head-&gt;next;</span><br><span class="line">        PCB *c = head;</span><br><span class="line">        <span class="keyword">for</span>(; b; )</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(a-&gt;prior &gt;= b-&gt;prior)</span><br><span class="line">            &#123;</span><br><span class="line">                c-&gt;next = a;</span><br><span class="line">                a-&gt;next = b;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            c = c-&gt;next;</span><br><span class="line">            b = b-&gt;next;</span><br><span class="line">            <span class="keyword">if</span>(!b)</span><br><span class="line">            &#123;</span><br><span class="line">                c-&gt;next = a;</span><br><span class="line">                a-&gt;next = <span class="literal">nullptr</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">run</span><span class="params">(PCBlist &amp;T)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    PCB *a = T.head;</span><br><span class="line">    PCB *ne;</span><br><span class="line">    a-&gt;next-&gt;time = a-&gt;next-&gt;time - <span class="number">1</span>;</span><br><span class="line">    a-&gt;next-&gt;prior = a-&gt;next-&gt;prior - <span class="number">1</span>;</span><br><span class="line">    ne = a-&gt;next;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"此时正在运行P"</span> &lt;&lt; ne-&gt;name &lt;&lt; <span class="string">"程序"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"程序的运行时间还剩"</span> &lt;&lt; ne-&gt;time &lt;&lt;  <span class="built_in">endl</span>;</span><br><span class="line">    a-&gt;next = ne-&gt;next;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(ne-&gt;time)</span><br><span class="line">        T.insert(*ne);</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"进程P"</span> &lt;&lt; ne-&gt;name &lt;&lt; <span class="string">"运行结束"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------------------------"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"进程名：P"</span> &lt;&lt; ne-&gt;name &lt;&lt; <span class="string">' '</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"优先级："</span> &lt;&lt; ne-&gt;prior &lt;&lt; <span class="string">' '</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"剩余运行时间："</span> &lt;&lt; ne-&gt;time &lt;&lt; <span class="string">' '</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"状态：E"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------------------------"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">PCBlist::show</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    PCB *a = head-&gt;next;</span><br><span class="line">    <span class="keyword">for</span>(; a; a = a-&gt;next)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------------------------"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"进程名：P"</span> &lt;&lt; a-&gt;name &lt;&lt; <span class="string">' '</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"优先级："</span> &lt;&lt; a-&gt;prior &lt;&lt; <span class="string">' '</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"剩余运行时间："</span> &lt;&lt; a-&gt;time &lt;&lt; <span class="string">' '</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"状态：R"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------------------------"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    PCBlist T;</span><br><span class="line">    <span class="keyword">int</span> n = <span class="number">1</span>;</span><br><span class="line">    PCB a;</span><br><span class="line">    <span class="keyword">int</span> time;</span><br><span class="line">    <span class="keyword">int</span> prior;</span><br><span class="line">    <span class="keyword">int</span> status;</span><br><span class="line">    <span class="keyword">for</span>(; n &lt; <span class="number">6</span>; n++)</span><br><span class="line">    &#123;</span><br><span class="line">        a.name = n;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"请输入第"</span> &lt;&lt; n &lt;&lt; <span class="string">"个进程的运行时间："</span> ;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; time;</span><br><span class="line">        a.time = time;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"请输入第"</span> &lt;&lt; n &lt;&lt; <span class="string">"个进程的优先级："</span> ;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; prior;</span><br><span class="line">        a.prior = prior;</span><br><span class="line">        a.status = <span class="number">1</span>;</span><br><span class="line">        T.insert(a);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"------------------------------"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">while</span>(T.head-&gt;next)</span><br><span class="line">        &#123;<span class="built_in">run</span>(T);</span><br><span class="line">        T.show();&#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2020/06/13/%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6%E6%A8%A1%E6%8B%9F%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/%E6%89%A7%E8%A1%8C%E6%88%90%E6%9E%9C1.png" alt="执行成果1"><br><img src="/2020/06/13/%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6%E6%A8%A1%E6%8B%9F%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/%E6%89%A7%E8%A1%8C%E6%88%90%E6%9E%9C2.png" alt="执行成果2"></p>
 <p>完</p>
 ]]></content>
       <categories>
-        <category>hexo</category>
+        <category>homework</category>
       </categories>
   </entry>
 </search>
