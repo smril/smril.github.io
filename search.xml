@@ -608,4 +608,38 @@
         <category>homework</category>
       </categories>
   </entry>
+  <entry>
+    <title>openCV笔记—第一课</title>
+    <url>/2020/10/11/openCV%E7%AC%94%E8%AE%B0%E2%80%94%E7%AC%AC%E4%B8%80%E8%AF%BE/</url>
+    <content><![CDATA[<h3 id="加载、修改、保存和显示图像"><a href="#加载、修改、保存和显示图像" class="headerlink" title="加载、修改、保存和显示图像"></a>加载、修改、保存和显示图像</h3><p>处理图像，首先要有图像，下面介绍三个函数，分别是加载、修改和保存图像。然后介绍显示图像。</p>
+<a id="more"></a>
+
+<h4 id="加载图像"><a href="#加载图像" class="headerlink" title="加载图像"></a>加载图像</h4><p>我们要处理图像，首先要将图像加载出来，加载图像的方法是cv::imread，imread有两个参数，第一个参数表示文件的路径，第二个参数表示加载图像的类型，常用的有三种类型：<br>IMREAD_UNCHANGED(&lt;0) 表示加载原图<br>IMREAD_GRAYSCALE(0) 表示把原图作为灰度图像加载进来<br>IMREAD_COLOR(&gt;0) 表示把原图作为RGB图像加载进来</p>
+<p>例：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">Mat src;</span><br><span class="line">    src = imread(<span class="string">"/Users/#####/Downloads/IMG.jpg"</span>);</span><br></pre></td></tr></table></figure>
+
+<p>第二个参数默认为RGB图像。</p>
+<h4 id="修改图像"><a href="#修改图像" class="headerlink" title="修改图像"></a>修改图像</h4><p>除了加载图像，我们还可以转换图像，转换图像的办法是cv::cvtColor，cvtColor有三个参数，第一个是原图，第二个是转换后的图像，第三个是要转换成什么格式</p>
+<p>例：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">Mat gray_src;</span><br><span class="line">    cvtColor(src, gray_src, COLOR_BGR2GRAY);</span><br></pre></td></tr></table></figure>
+
+<p>这样就把上面的三通道src图像转换为了单通道的gray_src图像</p>
+<h4 id="保存图像"><a href="#保存图像" class="headerlink" title="保存图像"></a>保存图像</h4><p>保存图像是用cv::imwrite，imwrite有两个参数，第一个是要保存的路径，第二个是要保存的图片</p>
+<p>例：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">imwrite(<span class="string">"/Users/#####/Downloads/output_image.jpg"</span>, output_image);</span><br></pre></td></tr></table></figure>
+
+<p>这样就可以把图片保存到第一个参数的路径下了。</p>
+<h4 id="显示图像"><a href="#显示图像" class="headerlink" title="显示图像"></a>显示图像</h4><p>显示图像，我们首先要创建窗体，创建窗体的方法是cv::namedWindow</p>
+<p>例：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">namedWindow(<span class="string">"output"</span>, WINDOW_AUTOSIZE);</span><br></pre></td></tr></table></figure>
+<p>这样我们创建了一个名字叫output的窗体，他的大小是自动的。</p>
+<p>显示图像的方法是cv::imshow，我们将图像在这个窗体显示出来</p>
+<p>例：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">imshow(<span class="string">"output"</span>, src);</span><br></pre></td></tr></table></figure>
+<p>这样就将src图像通过output窗体显示出来。</p>
+]]></content>
+      <categories>
+        <category>openCV</category>
+      </categories>
+  </entry>
 </search>
