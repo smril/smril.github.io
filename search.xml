@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>SNCtest</title>
+    <url>/2020/11/17/SNCtest/</url>
+    <content><![CDATA[<p>##SNCtest</p>
+<p>hello world!</p>
+]]></content>
+  </entry>
+  <entry>
     <title>hexo d后撤销，再次上传时失败解决办法</title>
     <url>/2020/06/12/hexo-d%E5%90%8E%E6%92%A4%E9%94%80%EF%BC%8C%E5%86%8D%E6%AC%A1%E4%B8%8A%E4%BC%A0%E6%97%B6%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
     <content><![CDATA[<p>在博客里添加下载功能，只需要在source中添加一个download文件夹，将文件放在里面，然后在博客中写：<br>[显示信息](\download\文件名) 即可</p>
@@ -70,40 +77,6 @@
 ]]></content>
       <categories>
         <category>java</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>openCV笔记—第一课</title>
-    <url>/2020/10/11/openCV%E7%AC%94%E8%AE%B0%E2%80%94%E7%AC%AC%E4%B8%80%E8%AF%BE/</url>
-    <content><![CDATA[<h3 id="加载、修改、保存和显示图像"><a href="#加载、修改、保存和显示图像" class="headerlink" title="加载、修改、保存和显示图像"></a>加载、修改、保存和显示图像</h3><p>处理图像，首先要有图像，下面介绍三个函数，分别是加载、修改和保存图像。然后介绍显示图像。</p>
-<a id="more"></a>
-
-<h4 id="加载图像"><a href="#加载图像" class="headerlink" title="加载图像"></a>加载图像</h4><p>我们要处理图像，首先要将图像加载出来，加载图像的方法是cv::imread，imread有两个参数，第一个参数表示文件的路径，第二个参数表示加载图像的类型，常用的有三种类型：<br>IMREAD_UNCHANGED(&lt;0) 表示加载原图<br>IMREAD_GRAYSCALE(0) 表示把原图作为灰度图像加载进来<br>IMREAD_COLOR(&gt;0) 表示把原图作为RGB图像加载进来</p>
-<p>例：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">Mat src;</span><br><span class="line">    src = imread(<span class="string">"/Users/#####/Downloads/IMG.jpg"</span>);</span><br></pre></td></tr></table></figure>
-
-<p>第二个参数默认为RGB图像。</p>
-<h4 id="修改图像"><a href="#修改图像" class="headerlink" title="修改图像"></a>修改图像</h4><p>除了加载图像，我们还可以转换图像，转换图像的办法是cv::cvtColor，cvtColor有三个参数，第一个是原图，第二个是转换后的图像，第三个是要转换成什么格式</p>
-<p>例：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">Mat gray_src;</span><br><span class="line">    cvtColor(src, gray_src, COLOR_BGR2GRAY);</span><br></pre></td></tr></table></figure>
-
-<p>这样就把上面的三通道src图像转换为了单通道的gray_src图像</p>
-<h4 id="保存图像"><a href="#保存图像" class="headerlink" title="保存图像"></a>保存图像</h4><p>保存图像是用cv::imwrite，imwrite有两个参数，第一个是要保存的路径，第二个是要保存的图片</p>
-<p>例：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">imwrite(<span class="string">"/Users/#####/Downloads/output_image.jpg"</span>, output_image);</span><br></pre></td></tr></table></figure>
-
-<p>这样就可以把图片保存到第一个参数的路径下了。</p>
-<h4 id="显示图像"><a href="#显示图像" class="headerlink" title="显示图像"></a>显示图像</h4><p>显示图像，我们首先要创建窗体，创建窗体的方法是cv::namedWindow</p>
-<p>例：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">namedWindow(<span class="string">"output"</span>, WINDOW_AUTOSIZE);</span><br></pre></td></tr></table></figure>
-<p>这样我们创建了一个名字叫output的窗体，他的大小是自动的。</p>
-<p>显示图像的方法是cv::imshow，我们将图像在这个窗体显示出来</p>
-<p>例：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">imshow(<span class="string">"output"</span>, src);</span><br></pre></td></tr></table></figure>
-<p>这样就将src图像通过output窗体显示出来。</p>
-]]></content>
-      <categories>
-        <category>openCV</category>
       </categories>
   </entry>
   <entry>
@@ -197,6 +170,40 @@
       </categories>
   </entry>
   <entry>
+    <title>openCV笔记—第一课</title>
+    <url>/2020/10/11/openCV%E7%AC%94%E8%AE%B0%E2%80%94%E7%AC%AC%E4%B8%80%E8%AF%BE/</url>
+    <content><![CDATA[<h3 id="加载、修改、保存和显示图像"><a href="#加载、修改、保存和显示图像" class="headerlink" title="加载、修改、保存和显示图像"></a>加载、修改、保存和显示图像</h3><p>处理图像，首先要有图像，下面介绍三个函数，分别是加载、修改和保存图像。然后介绍显示图像。</p>
+<a id="more"></a>
+
+<h4 id="加载图像"><a href="#加载图像" class="headerlink" title="加载图像"></a>加载图像</h4><p>我们要处理图像，首先要将图像加载出来，加载图像的方法是cv::imread，imread有两个参数，第一个参数表示文件的路径，第二个参数表示加载图像的类型，常用的有三种类型：<br>IMREAD_UNCHANGED(&lt;0) 表示加载原图<br>IMREAD_GRAYSCALE(0) 表示把原图作为灰度图像加载进来<br>IMREAD_COLOR(&gt;0) 表示把原图作为RGB图像加载进来</p>
+<p>例：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">Mat src;</span><br><span class="line">    src = imread(<span class="string">"/Users/#####/Downloads/IMG.jpg"</span>);</span><br></pre></td></tr></table></figure>
+
+<p>第二个参数默认为RGB图像。</p>
+<h4 id="修改图像"><a href="#修改图像" class="headerlink" title="修改图像"></a>修改图像</h4><p>除了加载图像，我们还可以转换图像，转换图像的办法是cv::cvtColor，cvtColor有三个参数，第一个是原图，第二个是转换后的图像，第三个是要转换成什么格式</p>
+<p>例：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">Mat gray_src;</span><br><span class="line">    cvtColor(src, gray_src, COLOR_BGR2GRAY);</span><br></pre></td></tr></table></figure>
+
+<p>这样就把上面的三通道src图像转换为了单通道的gray_src图像</p>
+<h4 id="保存图像"><a href="#保存图像" class="headerlink" title="保存图像"></a>保存图像</h4><p>保存图像是用cv::imwrite，imwrite有两个参数，第一个是要保存的路径，第二个是要保存的图片</p>
+<p>例：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">imwrite(<span class="string">"/Users/#####/Downloads/output_image.jpg"</span>, output_image);</span><br></pre></td></tr></table></figure>
+
+<p>这样就可以把图片保存到第一个参数的路径下了。</p>
+<h4 id="显示图像"><a href="#显示图像" class="headerlink" title="显示图像"></a>显示图像</h4><p>显示图像，我们首先要创建窗体，创建窗体的方法是cv::namedWindow</p>
+<p>例：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">namedWindow(<span class="string">"output"</span>, WINDOW_AUTOSIZE);</span><br></pre></td></tr></table></figure>
+<p>这样我们创建了一个名字叫output的窗体，他的大小是自动的。</p>
+<p>显示图像的方法是cv::imshow，我们将图像在这个窗体显示出来</p>
+<p>例：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">imshow(<span class="string">"output"</span>, src);</span><br></pre></td></tr></table></figure>
+<p>这样就将src图像通过output窗体显示出来。</p>
+]]></content>
+      <categories>
+        <category>openCV</category>
+      </categories>
+  </entry>
+  <entry>
     <title>python豆瓣top250爬虫
 </title>
     <url>/2020/04/29/python%E8%B1%86%E7%93%A3top250%E7%88%AC%E8%99%AB/</url>
@@ -221,18 +228,6 @@
 <h3 id="至此，我们的豆瓣top250电影爬虫就完成了"><a href="#至此，我们的豆瓣top250电影爬虫就完成了" class="headerlink" title="至此，我们的豆瓣top250电影爬虫就完成了"></a>至此，我们的豆瓣top250电影爬虫就完成了</h3>]]></content>
       <categories>
         <category>python</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>初音未来2020贺图</title>
-    <url>/2020/08/31/%E5%88%9D%E9%9F%B3%E6%9C%AA%E6%9D%A52020%E8%B4%BA%E5%9B%BE/</url>
-    <content><![CDATA[<h3 id="初音未来13周年贺图！！"><a href="#初音未来13周年贺图！！" class="headerlink" title="初音未来13周年贺图！！"></a>初音未来13周年贺图！！</h3><p><a href="https://www.pixiv.net/artworks/84057515" target="_blank" rel="noopener">https://www.pixiv.net/artworks/84057515</a></p>
-<a id="more"></a>
-
-<p><img src="/2020/08/31/%E5%88%9D%E9%9F%B3%E6%9C%AA%E6%9D%A52020%E8%B4%BA%E5%9B%BE/cy2020.jpg" alt="cy2020"></p>
-]]></content>
-      <categories>
-        <category>painting</category>
       </categories>
   </entry>
   <entry>
@@ -284,6 +279,33 @@
       </categories>
   </entry>
   <entry>
+    <title>初音未来2020贺图</title>
+    <url>/2020/08/31/%E5%88%9D%E9%9F%B3%E6%9C%AA%E6%9D%A52020%E8%B4%BA%E5%9B%BE/</url>
+    <content><![CDATA[<h3 id="初音未来13周年贺图！！"><a href="#初音未来13周年贺图！！" class="headerlink" title="初音未来13周年贺图！！"></a>初音未来13周年贺图！！</h3><p><a href="https://www.pixiv.net/artworks/84057515" target="_blank" rel="noopener">https://www.pixiv.net/artworks/84057515</a></p>
+<a id="more"></a>
+
+<p><img src="/2020/08/31/%E5%88%9D%E9%9F%B3%E6%9C%AA%E6%9D%A52020%E8%B4%BA%E5%9B%BE/cy2020.jpg" alt="cy2020"></p>
+]]></content>
+      <categories>
+        <category>painting</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>放几张画的画^~^</title>
+    <url>/2020/05/04/%E6%94%BE%E5%87%A0%E5%BC%A0%E7%94%BB%E7%9A%84%E7%94%BB/</url>
+    <content><![CDATA[<h3 id="放几张画，记录一下"><a href="#放几张画，记录一下" class="headerlink" title="放几张画，记录一下"></a>放几张画，记录一下</h3><p>我的P站ID：14255525<br>昵称：smril</p>
+<a id="more"></a>
+
+<h5 id="下面是最近画的三幅画～"><a href="#下面是最近画的三幅画～" class="headerlink" title="下面是最近画的三幅画～"></a>下面是最近画的三幅画～</h5><p>p站地址：<a href="https://www.pixiv.net/artworks/81241591" target="_blank" rel="noopener">https://www.pixiv.net/artworks/81241591</a><br>p站地址：<a href="https://www.pixiv.net/artworks/79442962" target="_blank" rel="noopener">https://www.pixiv.net/artworks/79442962</a><br>p站地址：<a href="https://www.pixiv.net/artworks/76539307" target="_blank" rel="noopener">https://www.pixiv.net/artworks/76539307</a></p>
+<p><img src="/2020/05/04/%E6%94%BE%E5%87%A0%E5%BC%A0%E7%94%BB%E7%9A%84%E7%94%BB/%E4%B8%8D%E7%9F%A5%E7%81%AB.jpg" alt="不知火"></p>
+<p><img src="/2020/05/04/%E6%94%BE%E5%87%A0%E5%BC%A0%E7%94%BB%E7%9A%84%E7%94%BB/%E5%BE%A1%E5%9D%82%E7%BE%8E%E7%90%B4.jpg" alt="御坂美琴"></p>
+<p><img src="/2020/05/04/%E6%94%BE%E5%87%A0%E5%BC%A0%E7%94%BB%E7%9A%84%E7%94%BB/%E5%88%9D%E9%9F%B3%E6%9C%AA%E6%9D%A5.jpg" alt="初音未来"></p>
+]]></content>
+      <categories>
+        <category>painting</category>
+      </categories>
+  </entry>
+  <entry>
     <title>数据库课程设计学习记录一</title>
     <url>/2020/05/14/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%E4%B8%80/</url>
     <content><![CDATA[<h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><p>实践内容 实验室设备管理系统<br>建立一个实验室设备管理系统, 编写应用程序完成系统开发。</p>
@@ -297,35 +319,6 @@
 <p>将thinkphp整个文件解压到wamp64目录下的www目录里，单独有一个文件夹用来放thinkphp解压内容。</p>
 <p>最终的效果是wampserver图标变绿，即三个服务都已经开启，在浏览器里输入localhost，就可以看到主界面，点击放thinkphp的文件夹，会看到类似FTP服务器的界面，点击public，看到“十年磨一剑，高性能的#¥%”字样，就说明准备工作成功了。</p>
 <p>这里最大的问题是wampserver怎么变绿，大多数问题即为80端口被占，或者原来的mysql服务没有关闭，80端口被占可以在httpd.conf里更改监听端口，但是注意更改后localhost后要加:端口号，例：localhost:8080，在点击thinkphp文件夹后，默认是不加端口号的，仍然要手动添加。关闭原来的mysql服务，可以右击我的电脑-管理-服务，找到mysql，停止即可。</p>
-]]></content>
-      <categories>
-        <category>数据库课程设计</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>数据库课程设计学习记录二</title>
-    <url>/2020/05/20/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%E4%BA%8C/</url>
-    <content><![CDATA[<h3 id="插入一条数据"><a href="#插入一条数据" class="headerlink" title="插入一条数据"></a>插入一条数据</h3><p>这里讲述如何向数据库里插入数据</p>
-<a id="more"></a>
-
-<h5 id="基本设置"><a href="#基本设置" class="headerlink" title="基本设置"></a>基本设置</h5><p>首先我们在application下新建一个模块(文件夹)，我起名为keshe，然后在模块下新建四个文件夹，controller, model, validate, view, 这四个文件夹分别对应控制器，模型，验证器和视图，我们首先在model下新建一个文件，命名首字母需要大写，里面的内容为：</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">app</span>\<span class="title">keshe</span>\<span class="title">model</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">think</span>\<span class="title">Model</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">think</span>\<span class="title">model</span>\<span class="title">SoftDelete</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Shebei</span> <span class="keyword">extends</span> <span class="title">Model</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>class后的类名要和文件名保持一致，这里的类名即为数据表的名字</p>
-<p>然后我们在controller文件夹下创建一个User.php，用来控制插入数据，在php文件里写入：</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">app</span>\<span class="title">keshe</span>\<span class="title">controller</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">think</span>\<span class="title">Controller</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">app</span>\<span class="title">keshe</span>\<span class="title">model</span>\<span class="title">Shebei</span> <span class="title">as</span> <span class="title">UserModel</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">app</span>\<span class="title">keshe</span>\<span class="title">validate</span>\<span class="title">Val</span> <span class="title">as</span> <span class="title">UserValidate</span>;</span><br></pre></td></tr></table></figure>
-<p>这段代码是引用了一些东西，并且给他们起了别名，注意这里的路径，都是我们本模块下的文件,接着我们写入控制器方法：</p>
-<h5 id="控制器方法"><a href="#控制器方法" class="headerlink" title="控制器方法"></a>控制器方法</h5><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span> <span class="keyword">extends</span> <span class="title">Controller</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">Shebei</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">       <span class="keyword">return</span> <span class="keyword">$this</span>-&gt;fetch();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">insert</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        $data = input(<span class="string">'post.'</span>);</span><br><span class="line">        $val = <span class="keyword">new</span> UserValidate();</span><br><span class="line">        <span class="keyword">if</span> (!$val-&gt;check($data))&#123;</span><br><span class="line">            <span class="keyword">$this</span>-&gt;error($val-&gt;getError());</span><br><span class="line">            <span class="keyword">exit</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        $user = <span class="keyword">new</span> UserModel($data);</span><br><span class="line">        $ret = $user-&gt;allowField(<span class="keyword">true</span>)-&gt;save();</span><br><span class="line">        <span class="keyword">if</span>($ret)&#123;</span><br><span class="line">            <span class="keyword">$this</span>-&gt; success(<span class="string">'插入成功'</span>,<span class="string">'Shebei'</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">$this</span>-&gt;error(<span class="string">'插入失败'</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这段代码里有两个方法，一个是Shebei方法，是直接返回view里的内容，另一个是insert方法，用来插入数据，开始先将视图模版里用户输入的数据用post方法传给$data，接下来是一个验证输入内容的验证器，用来调用validate里的php文件检验输入的数据是否有误。</p>
-<h5 id="验证器方法"><a href="#验证器方法" class="headerlink" title="验证器方法"></a>验证器方法</h5><p>在validate文件夹下建立一个新的文件叫做Val.php, 命名无所谓，但首字母要大写，也要和上面的控制器里的命名保持一致</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">app</span>\<span class="title">keshe</span>\<span class="title">validate</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">think</span>\<span class="title">Validate</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Val</span> <span class="keyword">extends</span> <span class="title">Validate</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">protected</span> $rule = [</span><br><span class="line">        <span class="string">'shebeihao|设备号'</span>=&gt;<span class="string">'require'</span>,</span><br><span class="line">        <span class="string">'shebeimingcheng|投影仪'</span>=&gt;<span class="string">'require'</span>,</span><br><span class="line">        <span class="string">'jiage|价格'</span>=&gt;<span class="string">'require'</span>,</span><br><span class="line">        <span class="string">'peizhi|配置'</span>=&gt;<span class="string">'require'</span>,</span><br><span class="line">        <span class="string">'changjiamingcheng|厂家名称'</span>=&gt;<span class="string">'require'</span>,</span><br><span class="line">        <span class="string">'chuchangriqi|出厂日期'</span>=&gt;<span class="string">'require'</span>,</span><br><span class="line">        <span class="string">'shiyanshiming|实验室名'</span>=&gt;<span class="string">'require'</span>,</span><br><span class="line">    ];</span><br><span class="line">    <span class="keyword">protected</span> $message = [</span><br><span class="line">        <span class="string">'shebeihao.require'</span>=&gt;<span class="string">'邮箱不能为空！'</span>,</span><br><span class="line">        <span class="string">'shebeimingcheng.require'</span>=&gt;<span class="string">'设备名称不能为空！'</span>,</span><br><span class="line">        <span class="string">'jiage.require'</span>=&gt;<span class="string">'价格不能为空！'</span>,</span><br><span class="line">        <span class="string">'peizhi.require'</span>=&gt;<span class="string">'配置不能为空！'</span>,</span><br><span class="line">        <span class="string">'changjiamingcheng.require'</span>=&gt;<span class="string">'厂家名称不能为空！'</span>,</span><br><span class="line">        <span class="string">'chuchangriqi.require'</span>=&gt;<span class="string">'出厂日期不能为空！'</span>,</span><br><span class="line">        <span class="string">'shiyanshiming.require'</span>=&gt;<span class="string">'实验室名不能为空！'</span>,</span><br><span class="line">    ];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这一段即为validate验证器里的代码，可以看到所有的验证规则和不符合的提示信息，require即不为空，还有min、max等操作，注意类名和文件名保持一致</p>
-<h5 id="网页代码"><a href="#网页代码" class="headerlink" title="网页代码"></a>网页代码</h5><p>然后我们在view下新建一个文件夹，命名和控制器里的类名要保持一致，然后在其中建立一个HTML网页，命名和控制器的方法保持一致，然后用HTML代码写出各个提交表单的窗口</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>添加设备信息<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">form</span> <span class="attr">method</span>=<span class="string">"post"</span> <span class="attr">class</span>=<span class="string">"form-x"</span> <span class="attr">action</span>=<span class="string">"insert"</span>&gt;</span>  </span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"form-group"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"label"</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">label</span>&gt;</span>设备号<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"field"</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">class</span>=<span class="string">"input  w50"</span> <span class="attr">name</span>=<span class="string">"shebeihao"</span>  <span class="attr">value</span>=<span class="string">""</span> <span class="attr">data-validate</span>=<span class="string">"required:请输入设备号！"</span>/&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tips"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"form-group"</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"label"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">label</span>&gt;</span>设备名称<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"field"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">class</span>=<span class="string">"input w50"</span> <span class="attr">name</span>=<span class="string">"shebeimingcheng"</span> <span class="attr">value</span>=<span class="string">""</span>  <span class="attr">data-validate</span>=<span class="string">"required:请输入设备名称！"</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tips"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"form-group"</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"label"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">label</span>&gt;</span>价格<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"field"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">class</span>=<span class="string">"input w50"</span> <span class="attr">name</span>=<span class="string">"jiage"</span> <span class="attr">value</span>=<span class="string">""</span>  <span class="attr">data-validate</span>=<span class="string">"required:请输入价格！"</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tips"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"form-group"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"label"</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">label</span>&gt;</span>配置<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"field"</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">class</span>=<span class="string">"input w50"</span> <span class="attr">name</span>=<span class="string">"peizhi"</span> <span class="attr">value</span>=<span class="string">""</span>  <span class="attr">data-validate</span>=<span class="string">"required:请输入配置！"</span>/&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tips"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"form-group"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"label"</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">label</span>&gt;</span>厂家名称<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"field"</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">class</span>=<span class="string">"input w50"</span> <span class="attr">name</span>=<span class="string">"changjiamingcheng"</span> <span class="attr">value</span>=<span class="string">""</span>  <span class="attr">data-validate</span>=<span class="string">"required:请输入厂家名称！"</span>/&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tips"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"form-group"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"label"</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">label</span>&gt;</span>出厂日期<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"field"</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">class</span>=<span class="string">"input w50"</span> <span class="attr">name</span>=<span class="string">"chuchangriqi"</span> <span class="attr">value</span>=<span class="string">""</span>  <span class="attr">data-validate</span>=<span class="string">"required:请输入出厂日期！"</span>/&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tips"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"form-group"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"label"</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">label</span>&gt;</span>实验室名<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"field"</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">class</span>=<span class="string">"input w50"</span> <span class="attr">name</span>=<span class="string">"shiyanshiming"</span> <span class="attr">value</span>=<span class="string">""</span>  <span class="attr">data-validate</span>=<span class="string">"required:请输入实验室名！"</span>/&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tips"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"form-group"</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"label"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">label</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"field"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"button bg-main icon-check-square-o"</span> <span class="attr">type</span>=<span class="string">"submit"</span>&gt;</span> 提交<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="建立数据库"><a href="#建立数据库" class="headerlink" title="建立数据库"></a>建立数据库</h5><p>用phpadmin或者命令行建立一个和要求一致的数据表，然后在database.php里将数据库名和前缀指到这个数据库。</p>
-<h5 id="完成插入操作"><a href="#完成插入操作" class="headerlink" title="完成插入操作"></a>完成插入操作</h5><p>再然后，我们就将数据插入到数据库里，并检验是否插入成功。如果插入成功，会弹出插入成功字样，并且跳转到Shebei.html。</p>
-<p><img src="/2020/05/20/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%E4%BA%8C/%E6%8F%92%E5%85%A5%E6%88%90%E5%8A%9F.png" alt="插入成功"></p>
-<h3 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h3><p>到这里插入工作就完成了，查看数据库即可发现多出来的数据，做这个操作最多的错误即为命名问题，一定要注意首字母大写问题和命名一致问题。application文件夹是在wamp64下的www目录下的thinkphp文件里。</p>
 ]]></content>
       <categories>
         <category>数据库课程设计</category>
@@ -373,18 +366,32 @@
       </categories>
   </entry>
   <entry>
-    <title>放几张画的画^~^</title>
-    <url>/2020/05/04/%E6%94%BE%E5%87%A0%E5%BC%A0%E7%94%BB%E7%9A%84%E7%94%BB/</url>
-    <content><![CDATA[<h3 id="放几张画，记录一下"><a href="#放几张画，记录一下" class="headerlink" title="放几张画，记录一下"></a>放几张画，记录一下</h3><p>我的P站ID：14255525<br>昵称：smril</p>
+    <title>数据库课程设计学习记录二</title>
+    <url>/2020/05/20/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%E4%BA%8C/</url>
+    <content><![CDATA[<h3 id="插入一条数据"><a href="#插入一条数据" class="headerlink" title="插入一条数据"></a>插入一条数据</h3><p>这里讲述如何向数据库里插入数据</p>
 <a id="more"></a>
 
-<h5 id="下面是最近画的三幅画～"><a href="#下面是最近画的三幅画～" class="headerlink" title="下面是最近画的三幅画～"></a>下面是最近画的三幅画～</h5><p>p站地址：<a href="https://www.pixiv.net/artworks/81241591" target="_blank" rel="noopener">https://www.pixiv.net/artworks/81241591</a><br>p站地址：<a href="https://www.pixiv.net/artworks/79442962" target="_blank" rel="noopener">https://www.pixiv.net/artworks/79442962</a><br>p站地址：<a href="https://www.pixiv.net/artworks/76539307" target="_blank" rel="noopener">https://www.pixiv.net/artworks/76539307</a></p>
-<p><img src="/2020/05/04/%E6%94%BE%E5%87%A0%E5%BC%A0%E7%94%BB%E7%9A%84%E7%94%BB/%E4%B8%8D%E7%9F%A5%E7%81%AB.jpg" alt="不知火"></p>
-<p><img src="/2020/05/04/%E6%94%BE%E5%87%A0%E5%BC%A0%E7%94%BB%E7%9A%84%E7%94%BB/%E5%BE%A1%E5%9D%82%E7%BE%8E%E7%90%B4.jpg" alt="御坂美琴"></p>
-<p><img src="/2020/05/04/%E6%94%BE%E5%87%A0%E5%BC%A0%E7%94%BB%E7%9A%84%E7%94%BB/%E5%88%9D%E9%9F%B3%E6%9C%AA%E6%9D%A5.jpg" alt="初音未来"></p>
+<h5 id="基本设置"><a href="#基本设置" class="headerlink" title="基本设置"></a>基本设置</h5><p>首先我们在application下新建一个模块(文件夹)，我起名为keshe，然后在模块下新建四个文件夹，controller, model, validate, view, 这四个文件夹分别对应控制器，模型，验证器和视图，我们首先在model下新建一个文件，命名首字母需要大写，里面的内容为：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">app</span>\<span class="title">keshe</span>\<span class="title">model</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">think</span>\<span class="title">Model</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">think</span>\<span class="title">model</span>\<span class="title">SoftDelete</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Shebei</span> <span class="keyword">extends</span> <span class="title">Model</span> </span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>class后的类名要和文件名保持一致，这里的类名即为数据表的名字</p>
+<p>然后我们在controller文件夹下创建一个User.php，用来控制插入数据，在php文件里写入：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">app</span>\<span class="title">keshe</span>\<span class="title">controller</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">think</span>\<span class="title">Controller</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">app</span>\<span class="title">keshe</span>\<span class="title">model</span>\<span class="title">Shebei</span> <span class="title">as</span> <span class="title">UserModel</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">app</span>\<span class="title">keshe</span>\<span class="title">validate</span>\<span class="title">Val</span> <span class="title">as</span> <span class="title">UserValidate</span>;</span><br></pre></td></tr></table></figure>
+<p>这段代码是引用了一些东西，并且给他们起了别名，注意这里的路径，都是我们本模块下的文件,接着我们写入控制器方法：</p>
+<h5 id="控制器方法"><a href="#控制器方法" class="headerlink" title="控制器方法"></a>控制器方法</h5><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span> <span class="keyword">extends</span> <span class="title">Controller</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">Shebei</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">       <span class="keyword">return</span> <span class="keyword">$this</span>-&gt;fetch();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">insert</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        $data = input(<span class="string">'post.'</span>);</span><br><span class="line">        $val = <span class="keyword">new</span> UserValidate();</span><br><span class="line">        <span class="keyword">if</span> (!$val-&gt;check($data))&#123;</span><br><span class="line">            <span class="keyword">$this</span>-&gt;error($val-&gt;getError());</span><br><span class="line">            <span class="keyword">exit</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        $user = <span class="keyword">new</span> UserModel($data);</span><br><span class="line">        $ret = $user-&gt;allowField(<span class="keyword">true</span>)-&gt;save();</span><br><span class="line">        <span class="keyword">if</span>($ret)&#123;</span><br><span class="line">            <span class="keyword">$this</span>-&gt; success(<span class="string">'插入成功'</span>,<span class="string">'Shebei'</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">$this</span>-&gt;error(<span class="string">'插入失败'</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这段代码里有两个方法，一个是Shebei方法，是直接返回view里的内容，另一个是insert方法，用来插入数据，开始先将视图模版里用户输入的数据用post方法传给$data，接下来是一个验证输入内容的验证器，用来调用validate里的php文件检验输入的数据是否有误。</p>
+<h5 id="验证器方法"><a href="#验证器方法" class="headerlink" title="验证器方法"></a>验证器方法</h5><p>在validate文件夹下建立一个新的文件叫做Val.php, 命名无所谓，但首字母要大写，也要和上面的控制器里的命名保持一致</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">app</span>\<span class="title">keshe</span>\<span class="title">validate</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">think</span>\<span class="title">Validate</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Val</span> <span class="keyword">extends</span> <span class="title">Validate</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">protected</span> $rule = [</span><br><span class="line">        <span class="string">'shebeihao|设备号'</span>=&gt;<span class="string">'require'</span>,</span><br><span class="line">        <span class="string">'shebeimingcheng|投影仪'</span>=&gt;<span class="string">'require'</span>,</span><br><span class="line">        <span class="string">'jiage|价格'</span>=&gt;<span class="string">'require'</span>,</span><br><span class="line">        <span class="string">'peizhi|配置'</span>=&gt;<span class="string">'require'</span>,</span><br><span class="line">        <span class="string">'changjiamingcheng|厂家名称'</span>=&gt;<span class="string">'require'</span>,</span><br><span class="line">        <span class="string">'chuchangriqi|出厂日期'</span>=&gt;<span class="string">'require'</span>,</span><br><span class="line">        <span class="string">'shiyanshiming|实验室名'</span>=&gt;<span class="string">'require'</span>,</span><br><span class="line">    ];</span><br><span class="line">    <span class="keyword">protected</span> $message = [</span><br><span class="line">        <span class="string">'shebeihao.require'</span>=&gt;<span class="string">'邮箱不能为空！'</span>,</span><br><span class="line">        <span class="string">'shebeimingcheng.require'</span>=&gt;<span class="string">'设备名称不能为空！'</span>,</span><br><span class="line">        <span class="string">'jiage.require'</span>=&gt;<span class="string">'价格不能为空！'</span>,</span><br><span class="line">        <span class="string">'peizhi.require'</span>=&gt;<span class="string">'配置不能为空！'</span>,</span><br><span class="line">        <span class="string">'changjiamingcheng.require'</span>=&gt;<span class="string">'厂家名称不能为空！'</span>,</span><br><span class="line">        <span class="string">'chuchangriqi.require'</span>=&gt;<span class="string">'出厂日期不能为空！'</span>,</span><br><span class="line">        <span class="string">'shiyanshiming.require'</span>=&gt;<span class="string">'实验室名不能为空！'</span>,</span><br><span class="line">    ];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这一段即为validate验证器里的代码，可以看到所有的验证规则和不符合的提示信息，require即不为空，还有min、max等操作，注意类名和文件名保持一致</p>
+<h5 id="网页代码"><a href="#网页代码" class="headerlink" title="网页代码"></a>网页代码</h5><p>然后我们在view下新建一个文件夹，命名和控制器里的类名要保持一致，然后在其中建立一个HTML网页，命名和控制器的方法保持一致，然后用HTML代码写出各个提交表单的窗口</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>添加设备信息<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">form</span> <span class="attr">method</span>=<span class="string">"post"</span> <span class="attr">class</span>=<span class="string">"form-x"</span> <span class="attr">action</span>=<span class="string">"insert"</span>&gt;</span>  </span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"form-group"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"label"</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">label</span>&gt;</span>设备号<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"field"</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">class</span>=<span class="string">"input  w50"</span> <span class="attr">name</span>=<span class="string">"shebeihao"</span>  <span class="attr">value</span>=<span class="string">""</span> <span class="attr">data-validate</span>=<span class="string">"required:请输入设备号！"</span>/&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tips"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;/<span class="name">div</span>&gt;</span>  </span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"form-group"</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"label"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">label</span>&gt;</span>设备名称<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"field"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">class</span>=<span class="string">"input w50"</span> <span class="attr">name</span>=<span class="string">"shebeimingcheng"</span> <span class="attr">value</span>=<span class="string">""</span>  <span class="attr">data-validate</span>=<span class="string">"required:请输入设备名称！"</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tips"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"form-group"</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"label"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">label</span>&gt;</span>价格<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"field"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">class</span>=<span class="string">"input w50"</span> <span class="attr">name</span>=<span class="string">"jiage"</span> <span class="attr">value</span>=<span class="string">""</span>  <span class="attr">data-validate</span>=<span class="string">"required:请输入价格！"</span>/&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tips"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"form-group"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"label"</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">label</span>&gt;</span>配置<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"field"</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">class</span>=<span class="string">"input w50"</span> <span class="attr">name</span>=<span class="string">"peizhi"</span> <span class="attr">value</span>=<span class="string">""</span>  <span class="attr">data-validate</span>=<span class="string">"required:请输入配置！"</span>/&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tips"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"form-group"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"label"</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">label</span>&gt;</span>厂家名称<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"field"</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">class</span>=<span class="string">"input w50"</span> <span class="attr">name</span>=<span class="string">"changjiamingcheng"</span> <span class="attr">value</span>=<span class="string">""</span>  <span class="attr">data-validate</span>=<span class="string">"required:请输入厂家名称！"</span>/&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tips"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"form-group"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"label"</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">label</span>&gt;</span>出厂日期<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"field"</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">class</span>=<span class="string">"input w50"</span> <span class="attr">name</span>=<span class="string">"chuchangriqi"</span> <span class="attr">value</span>=<span class="string">""</span>  <span class="attr">data-validate</span>=<span class="string">"required:请输入出厂日期！"</span>/&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tips"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"form-group"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"label"</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">label</span>&gt;</span>实验室名<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"field"</span>&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">class</span>=<span class="string">"input w50"</span> <span class="attr">name</span>=<span class="string">"shiyanshiming"</span> <span class="attr">value</span>=<span class="string">""</span>  <span class="attr">data-validate</span>=<span class="string">"required:请输入实验室名！"</span>/&gt;</span></span><br><span class="line">                  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tips"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"form-group"</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"label"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">label</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"field"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"button bg-main icon-check-square-o"</span> <span class="attr">type</span>=<span class="string">"submit"</span>&gt;</span> 提交<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">              <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="建立数据库"><a href="#建立数据库" class="headerlink" title="建立数据库"></a>建立数据库</h5><p>用phpadmin或者命令行建立一个和要求一致的数据表，然后在database.php里将数据库名和前缀指到这个数据库。</p>
+<h5 id="完成插入操作"><a href="#完成插入操作" class="headerlink" title="完成插入操作"></a>完成插入操作</h5><p>再然后，我们就将数据插入到数据库里，并检验是否插入成功。如果插入成功，会弹出插入成功字样，并且跳转到Shebei.html。</p>
+<p><img src="/2020/05/20/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%E4%BA%8C/%E6%8F%92%E5%85%A5%E6%88%90%E5%8A%9F.png" alt="插入成功"></p>
+<h3 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h3><p>到这里插入工作就完成了，查看数据库即可发现多出来的数据，做这个操作最多的错误即为命名问题，一定要注意首字母大写问题和命名一致问题。application文件夹是在wamp64下的www目录下的thinkphp文件里。</p>
 ]]></content>
       <categories>
-        <category>painting</category>
+        <category>数据库课程设计</category>
       </categories>
   </entry>
   <entry>
@@ -451,80 +458,6 @@
 ]]></content>
       <categories>
         <category>数据库课程设计</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>正则表达式入门一</title>
-    <url>/2020/04/29/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%85%A5%E9%97%A8/</url>
-    <content><![CDATA[<h3 id="首先，正则表达式是用来描述符合某些复杂规则的字符串"><a href="#首先，正则表达式是用来描述符合某些复杂规则的字符串" class="headerlink" title="首先，正则表达式是用来描述符合某些复杂规则的字符串"></a>首先，正则表达式是用来描述符合某些复杂规则的字符串</h3><p>本文主要是给自己做的笔记，其中大量参考了<a href="https://deerchao.cn/tutorials/regex/regex.htm的内容。" target="_blank" rel="noopener">https://deerchao.cn/tutorials/regex/regex.htm的内容。</a></p>
-<a id="more"></a>
-<h3 id="了解"><a href="#了解" class="headerlink" title="了解"></a>了解</h3><p>首先先展示一些代码的功能：<br>. 表示任何单个字符<br>[ ] 字符集，对单个字符给出取值范围  [abc]表示a、b、c,<br>[^] 对单个字符给出排除范围 [^abc]表示非abc的单个字符<br>* 前一个字符0次或无限次扩展<br>+ 前一个字符一次或无限次扩展<br>？ 前一个字符0次或1次扩展<br>｜ 左右表达式任意一个 abc|def 表示abc、def<br>{m} 扩展前一个字符m次 ab{2}c表示abbc<br>{m, n} 扩展前一个字符m至n次 ab{1,2}c表示abc、abbc<br>^ 匹配字符的开头 ^abc表示abc且在一个字符串的开头<br>$ 匹配字符串开头 abc$表示abc且在一个字符的结尾<br>( ) 分组标记，内部只能使用｜操作符 (abc)表示abc，(abc|def)表示abc、def<br>\d 数字，等价于[0-9]<br>\w 单词字符，等价于[A-Za-z0-9_]<br>\b 匹配单词的开始或结束</p>
-<p>这些代码的组合就可以匹配各种复杂的字符串</p>
-<p>我们先来看几个经典的正则表达式：<br>^[A-Za-z]+$ 由26个字母组成的字符串<br>^-?\d+$ 整数形式的字符串<br>^[0-9]*[1-9][0-9]*$ 正整数形式的字符串<br>[1-9]\d{5} 中国境内邮政编码，6位<br>[\u4e00-\u9fa5] 匹配中文字符</p>
-<p>这几个我们可以等会在返回来看，我们先从简单的开始</p>
-<h3 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h3><h5 id="匹配简单字符"><a href="#匹配简单字符" class="headerlink" title="匹配简单字符"></a>匹配简单字符</h5><p>hi 可以匹配hi这个字符，只要是含有hi便可以匹配，如hi，him里的hi</p>
-<p>那如何匹配一个单词呢？</p>
-<p>首先我们先介绍一下”单词“的概念，这和我们通常理解的有些许不同：</p>
-<p>\w可以匹配任何一个字母或数字或中文或下划线，注意是一个<br>然后，不少于1个\w连起来中间没有其他的东西即为单词<br>比如 abc, a_3 都是单词</p>
-<p>那我们要匹配hi这个单词的话，就可以使用 \bhi\b</p>
-<h5 id="匹配数字"><a href="#匹配数字" class="headerlink" title="匹配数字"></a>匹配数字</h5><p>如果我们想匹配一组类似于010-12345678这样的电话号码的话<br>我们要用到的代码有</p>
-<p>\d 表示一个数字<br>{m} 扩展前一个字符m次</p>
-<p>现在，我们写出这样的表达式：<br>0/d{2}-/d{8}</p>
-<p>0表示匹配0，所有的电话号码开头都是0，然后后面匹配两位数字，然后匹配中横线，<br>最后再匹配8位数字</p>
-<p>如果我们既想匹配上面的电话号，又想匹配正常的手机号码(如18012345678)，那么<br>就需要用到分支条件，代码为｜</p>
-<p>首先我们看了解部分里的代码</p>
-<p>｜ 左右表达式任意一个 abc|def 表示abc、def</p>
-<p>这样就很清晰明了了，代码如下</p>
-<p>0/d{2}-/d{8}|1/d{2}/d{8}</p>
-<p>这样就能匹配到两种不同格式的电话号码了</p>
-<p>如果我们想要匹配多组重复的数据的话，我们就需要()来建立一个子表达式，然后可以对<br>这个表达式进行相关的操作，如表示IP地址，IP地址是由4个不大于255的数字加.组成的<br>如：<br>0.0.0.0<br>10.0.0.1<br>127.0.0.1<br>192.168.1.1<br>255.255.255.255<br>都是合法的IP地址，我们先用一组正则表达式表达四个数字中的一个：<br>这个数字有几种情况：[01]?\d\d?、2[0-4]\d、25[0-5],分别代表了0-199、200-249、<br>250-255这几个区间，我们用｜把他们连接起来，就构成了表达0-255的表达式，现在在用<br>()把这组数字变成一个子表达式，然后再重复四次，IP地址的表达式就完成了。</p>
-<p>（[01]?\d\d?|2[0-4]\d|25[0-5].){3}([01]?\d\d?|2[0-4]\d|25[0-5])</p>
-<p>值得注意的是.这个符号只出现了三次，所以最后的地址是不带.的</p>
-<h5 id="反义代码"><a href="#反义代码" class="headerlink" title="反义代码"></a>反义代码</h5><p>反义的代码就是反过来，如\w匹配任何字母数字汉字，那\W就是匹配除了字母数字汉字以外的字符</p>
-<p>反义代码有以下几个:</p>
-<p>\W   匹配任意不是字母，数字，下划线，汉字的字符<br>\S   匹配任意不是空白符的字符<br>\D   匹配任意非数字的字符<br>\B   匹配不是单词开头或结束的位置<br>[^x] 匹配除了x以外的任意字符</p>
-<h5 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h5><p>在开头提到的那篇文章里，这部分的用法叫后向引用，但是这个名字有点晦涩难懂，所以我习惯叫分组</p>
-<p>使用小括号的子表达式，都会有一个默认的分组编号，通过这个编号我们可以重复的搜索前面分组匹配过的文本，下面举个例子：</p>
-<p>首先我们匹配一个普通的单词：<br>\b(\w+)\b<br>这个正则表达式的意思是匹配一个单词，前后\b是单词的开头和结束，中间是\w匹配一次或多次扩展，这个单词会被标记为分组一(如果前面没有过这样的分组的话)，然后我们可以直接引用\1这个代码表示这个分组，如：</p>
-<p>\b(\w+)\b \1 这样的表达式意思是匹配一组相同的单词，中间用空格分隔,注意这样的写法,如果文本是yi yie这样的，他也会匹配出yi yi，但是如果正则表达式为\b(\w+)\b \1\b，就不会匹配出这样的结果，因为yie才是一个单词</p>
-<p>我们还可以指定分组的组名，使用的语法是(?<name>exp),也可以把尖括号改为单引号：</name></p>
-<p>\b(?<fenzu>\w+)\b \k<fenzu>\b</fenzu></fenzu></p>
-<p>引用自己命名的分组是\k&lt;组名&gt;，引用的结果和上面一样</p>
-<p>还有一种代码，格式为(?:exp)，这种格式会不分配组号，也不捕获文本，只是会单纯的匹配文本</p>
-<h3 id="第一章完～"><a href="#第一章完～" class="headerlink" title="第一章完～"></a>第一章完～</h3>]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>正则表达式入门二</title>
-    <url>/2020/05/03/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%85%A5%E9%97%A8%E4%BA%8C/</url>
-    <content><![CDATA[<h3 id="零宽断言"><a href="#零宽断言" class="headerlink" title="零宽断言"></a>零宽断言</h3><p>零宽断言这四个字还是有些难以理解，所以还是直接上例子，直观又清晰。</p>
-<a id="more"></a>
-
-<h5 id="零宽断言-1"><a href="#零宽断言-1" class="headerlink" title="零宽断言"></a>零宽断言</h5><p>但这一个名字我并没有理解这是什么东西，直到我看完了例子，下面直接给出例子：</p>
-<p>(?=exp) 匹配后面为exp的内容，即 XXXexp,匹配XXX</p>
-<p>例如 \b\w+(?=ing\b) 这个正则表达式，前面\b\w+的意思是首先匹配单词的开头，然后是连续的单词字符，到了后面括号里的，他就规定了前面这些东西必须满足后面是ing并且ing后是单词结束才能匹配，singing就会匹配出sing,如果是\b\w+(?=ing)会怎么样呢？实际上还是sing，为什么不是s？，马上就会在贪心和非贪心中给出答案</p>
-<p>(?&lt;=exp) 匹配前面为exp的内容，即 expXXX,匹配XXX</p>
-<p>例如(?&lt;=\bsi)\w+\b 这个正则表达式，会匹配以si开头的单词的除了si以外的部分，如singing，会匹配到inging。</p>
-<h5 id="负向零宽断言"><a href="#负向零宽断言" class="headerlink" title="负向零宽断言"></a>负向零宽断言</h5><p>仍然是直接看例子：</p>
-<p>(?!exp) 匹配后面不是exp的内容，即 XXXexp，不匹配XXX</p>
-<p>\d(?!\d) 匹配一位数字，而且他的后面不是数字，比如123，就只会匹配到3</p>
-<p>(?&lt;!exp) 匹配前面不是exp的内容，即 expXXX，不匹配XXX</p>
-<p>(?&lt;!\d)\d 匹配一位数字，而且他的前面不是数字，比如123，就只会匹配到1</p>
-<h3 id="贪心与非贪心"><a href="#贪心与非贪心" class="headerlink" title="贪心与非贪心"></a>贪心与非贪心</h3><p>也可以叫做贪婪与懒惰，都是一个意思，比如 a\w+d这个正则表达式,现在我们知道他是匹配以a为开头d为结尾并且中间以不少于一个中英文数字字符的单词，但是如果是asdsd这样的字符串，那么他匹配的是asd还是asdsd呢？</p>
-<p>答案是asdsd，因为一般默认的都是贪心匹配，他会尽可能的匹配较多的字符。</p>
-<p>我们可以将这个正则表达式改为非贪心匹配，只需要在+后加一个?，就可以了</p>
-<p>a\w+?d</p>
-<p>这样匹配的结果就会匹配尽可能少的字符串，比如asdsd，就会匹配出asd，加的?号是用来限定他前面的代码的，+号是匹配一次或多次，用?号来限定他匹配更少的字符，所以要加在+号后。</p>
-<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p>注释是很必要的，正则表达式是一种很复杂的语法，要给别人看或者看自己写了很久的正则表达式都需要费一番功夫，所以加上注释比较容易理解，注释的格式是：</p>
-<p>(?#comment) </p>
-<p>比如：</p>
-<p>[1-9]\d(?#10-99) ，注释就提示了前面的正则表达式所表示的范围为10-99之间的数字。</p>
-<h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>正则表达式的内容还有很多很多，这里只是最基础的用法，python中正则表达式库是re库，这个库是标准库，我们只需要import re就可以使用，有关re库的基础用法可以查看下一篇博客。</p>
-]]></content>
-      <categories>
-        <category>python</category>
       </categories>
   </entry>
   <entry>
@@ -605,6 +538,89 @@
       </categories>
   </entry>
   <entry>
+    <title>正则表达式入门一</title>
+    <url>/2020/04/29/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%85%A5%E9%97%A8/</url>
+    <content><![CDATA[<h3 id="首先，正则表达式是用来描述符合某些复杂规则的字符串"><a href="#首先，正则表达式是用来描述符合某些复杂规则的字符串" class="headerlink" title="首先，正则表达式是用来描述符合某些复杂规则的字符串"></a>首先，正则表达式是用来描述符合某些复杂规则的字符串</h3><p>本文主要是给自己做的笔记，其中大量参考了<a href="https://deerchao.cn/tutorials/regex/regex.htm的内容。" target="_blank" rel="noopener">https://deerchao.cn/tutorials/regex/regex.htm的内容。</a></p>
+<a id="more"></a>
+<h3 id="了解"><a href="#了解" class="headerlink" title="了解"></a>了解</h3><p>首先先展示一些代码的功能：<br>. 表示任何单个字符<br>[ ] 字符集，对单个字符给出取值范围  [abc]表示a、b、c,<br>[^] 对单个字符给出排除范围 [^abc]表示非abc的单个字符<br>* 前一个字符0次或无限次扩展<br>+ 前一个字符一次或无限次扩展<br>？ 前一个字符0次或1次扩展<br>｜ 左右表达式任意一个 abc|def 表示abc、def<br>{m} 扩展前一个字符m次 ab{2}c表示abbc<br>{m, n} 扩展前一个字符m至n次 ab{1,2}c表示abc、abbc<br>^ 匹配字符的开头 ^abc表示abc且在一个字符串的开头<br>$ 匹配字符串开头 abc$表示abc且在一个字符的结尾<br>( ) 分组标记，内部只能使用｜操作符 (abc)表示abc，(abc|def)表示abc、def<br>\d 数字，等价于[0-9]<br>\w 单词字符，等价于[A-Za-z0-9_]<br>\b 匹配单词的开始或结束</p>
+<p>这些代码的组合就可以匹配各种复杂的字符串</p>
+<p>我们先来看几个经典的正则表达式：<br>^[A-Za-z]+$ 由26个字母组成的字符串<br>^-?\d+$ 整数形式的字符串<br>^[0-9]*[1-9][0-9]*$ 正整数形式的字符串<br>[1-9]\d{5} 中国境内邮政编码，6位<br>[\u4e00-\u9fa5] 匹配中文字符</p>
+<p>这几个我们可以等会在返回来看，我们先从简单的开始</p>
+<h3 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h3><h5 id="匹配简单字符"><a href="#匹配简单字符" class="headerlink" title="匹配简单字符"></a>匹配简单字符</h5><p>hi 可以匹配hi这个字符，只要是含有hi便可以匹配，如hi，him里的hi</p>
+<p>那如何匹配一个单词呢？</p>
+<p>首先我们先介绍一下”单词“的概念，这和我们通常理解的有些许不同：</p>
+<p>\w可以匹配任何一个字母或数字或中文或下划线，注意是一个<br>然后，不少于1个\w连起来中间没有其他的东西即为单词<br>比如 abc, a_3 都是单词</p>
+<p>那我们要匹配hi这个单词的话，就可以使用 \bhi\b</p>
+<h5 id="匹配数字"><a href="#匹配数字" class="headerlink" title="匹配数字"></a>匹配数字</h5><p>如果我们想匹配一组类似于010-12345678这样的电话号码的话<br>我们要用到的代码有</p>
+<p>\d 表示一个数字<br>{m} 扩展前一个字符m次</p>
+<p>现在，我们写出这样的表达式：<br>0/d{2}-/d{8}</p>
+<p>0表示匹配0，所有的电话号码开头都是0，然后后面匹配两位数字，然后匹配中横线，<br>最后再匹配8位数字</p>
+<p>如果我们既想匹配上面的电话号，又想匹配正常的手机号码(如18012345678)，那么<br>就需要用到分支条件，代码为｜</p>
+<p>首先我们看了解部分里的代码</p>
+<p>｜ 左右表达式任意一个 abc|def 表示abc、def</p>
+<p>这样就很清晰明了了，代码如下</p>
+<p>0/d{2}-/d{8}|1/d{2}/d{8}</p>
+<p>这样就能匹配到两种不同格式的电话号码了</p>
+<p>如果我们想要匹配多组重复的数据的话，我们就需要()来建立一个子表达式，然后可以对<br>这个表达式进行相关的操作，如表示IP地址，IP地址是由4个不大于255的数字加.组成的<br>如：<br>0.0.0.0<br>10.0.0.1<br>127.0.0.1<br>192.168.1.1<br>255.255.255.255<br>都是合法的IP地址，我们先用一组正则表达式表达四个数字中的一个：<br>这个数字有几种情况：[01]?\d\d?、2[0-4]\d、25[0-5],分别代表了0-199、200-249、<br>250-255这几个区间，我们用｜把他们连接起来，就构成了表达0-255的表达式，现在在用<br>()把这组数字变成一个子表达式，然后再重复四次，IP地址的表达式就完成了。</p>
+<p>（[01]?\d\d?|2[0-4]\d|25[0-5].){3}([01]?\d\d?|2[0-4]\d|25[0-5])</p>
+<p>值得注意的是.这个符号只出现了三次，所以最后的地址是不带.的</p>
+<h5 id="反义代码"><a href="#反义代码" class="headerlink" title="反义代码"></a>反义代码</h5><p>反义的代码就是反过来，如\w匹配任何字母数字汉字，那\W就是匹配除了字母数字汉字以外的字符</p>
+<p>反义代码有以下几个:</p>
+<p>\W   匹配任意不是字母，数字，下划线，汉字的字符<br>\S   匹配任意不是空白符的字符<br>\D   匹配任意非数字的字符<br>\B   匹配不是单词开头或结束的位置<br>[^x] 匹配除了x以外的任意字符</p>
+<h5 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h5><p>在开头提到的那篇文章里，这部分的用法叫后向引用，但是这个名字有点晦涩难懂，所以我习惯叫分组</p>
+<p>使用小括号的子表达式，都会有一个默认的分组编号，通过这个编号我们可以重复的搜索前面分组匹配过的文本，下面举个例子：</p>
+<p>首先我们匹配一个普通的单词：<br>\b(\w+)\b<br>这个正则表达式的意思是匹配一个单词，前后\b是单词的开头和结束，中间是\w匹配一次或多次扩展，这个单词会被标记为分组一(如果前面没有过这样的分组的话)，然后我们可以直接引用\1这个代码表示这个分组，如：</p>
+<p>\b(\w+)\b \1 这样的表达式意思是匹配一组相同的单词，中间用空格分隔,注意这样的写法,如果文本是yi yie这样的，他也会匹配出yi yi，但是如果正则表达式为\b(\w+)\b \1\b，就不会匹配出这样的结果，因为yie才是一个单词</p>
+<p>我们还可以指定分组的组名，使用的语法是(?<name>exp),也可以把尖括号改为单引号：</name></p>
+<p>\b(?<fenzu>\w+)\b \k<fenzu>\b</fenzu></fenzu></p>
+<p>引用自己命名的分组是\k&lt;组名&gt;，引用的结果和上面一样</p>
+<p>还有一种代码，格式为(?:exp)，这种格式会不分配组号，也不捕获文本，只是会单纯的匹配文本</p>
+<h3 id="第一章完～"><a href="#第一章完～" class="headerlink" title="第一章完～"></a>第一章完～</h3>]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>正则表达式入门二</title>
+    <url>/2020/05/03/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%85%A5%E9%97%A8%E4%BA%8C/</url>
+    <content><![CDATA[<h3 id="零宽断言"><a href="#零宽断言" class="headerlink" title="零宽断言"></a>零宽断言</h3><p>零宽断言这四个字还是有些难以理解，所以还是直接上例子，直观又清晰。</p>
+<a id="more"></a>
+
+<h5 id="零宽断言-1"><a href="#零宽断言-1" class="headerlink" title="零宽断言"></a>零宽断言</h5><p>但这一个名字我并没有理解这是什么东西，直到我看完了例子，下面直接给出例子：</p>
+<p>(?=exp) 匹配后面为exp的内容，即 XXXexp,匹配XXX</p>
+<p>例如 \b\w+(?=ing\b) 这个正则表达式，前面\b\w+的意思是首先匹配单词的开头，然后是连续的单词字符，到了后面括号里的，他就规定了前面这些东西必须满足后面是ing并且ing后是单词结束才能匹配，singing就会匹配出sing,如果是\b\w+(?=ing)会怎么样呢？实际上还是sing，为什么不是s？，马上就会在贪心和非贪心中给出答案</p>
+<p>(?&lt;=exp) 匹配前面为exp的内容，即 expXXX,匹配XXX</p>
+<p>例如(?&lt;=\bsi)\w+\b 这个正则表达式，会匹配以si开头的单词的除了si以外的部分，如singing，会匹配到inging。</p>
+<h5 id="负向零宽断言"><a href="#负向零宽断言" class="headerlink" title="负向零宽断言"></a>负向零宽断言</h5><p>仍然是直接看例子：</p>
+<p>(?!exp) 匹配后面不是exp的内容，即 XXXexp，不匹配XXX</p>
+<p>\d(?!\d) 匹配一位数字，而且他的后面不是数字，比如123，就只会匹配到3</p>
+<p>(?&lt;!exp) 匹配前面不是exp的内容，即 expXXX，不匹配XXX</p>
+<p>(?&lt;!\d)\d 匹配一位数字，而且他的前面不是数字，比如123，就只会匹配到1</p>
+<h3 id="贪心与非贪心"><a href="#贪心与非贪心" class="headerlink" title="贪心与非贪心"></a>贪心与非贪心</h3><p>也可以叫做贪婪与懒惰，都是一个意思，比如 a\w+d这个正则表达式,现在我们知道他是匹配以a为开头d为结尾并且中间以不少于一个中英文数字字符的单词，但是如果是asdsd这样的字符串，那么他匹配的是asd还是asdsd呢？</p>
+<p>答案是asdsd，因为一般默认的都是贪心匹配，他会尽可能的匹配较多的字符。</p>
+<p>我们可以将这个正则表达式改为非贪心匹配，只需要在+后加一个?，就可以了</p>
+<p>a\w+?d</p>
+<p>这样匹配的结果就会匹配尽可能少的字符串，比如asdsd，就会匹配出asd，加的?号是用来限定他前面的代码的，+号是匹配一次或多次，用?号来限定他匹配更少的字符，所以要加在+号后。</p>
+<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p>注释是很必要的，正则表达式是一种很复杂的语法，要给别人看或者看自己写了很久的正则表达式都需要费一番功夫，所以加上注释比较容易理解，注释的格式是：</p>
+<p>(?#comment) </p>
+<p>比如：</p>
+<p>[1-9]\d(?#10-99) ，注释就提示了前面的正则表达式所表示的范围为10-99之间的数字。</p>
+<h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>正则表达式的内容还有很多很多，这里只是最基础的用法，python中正则表达式库是re库，这个库是标准库，我们只需要import re就可以使用，有关re库的基础用法可以查看下一篇博客。</p>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>生日纪念～</title>
+    <url>/2020/05/18/%E7%BA%AA%E5%BF%B5%E4%B8%8B%E8%87%AA%E5%B7%B1%E7%9A%8419%E5%B2%81%EF%BD%9E/</url>
+    <content><![CDATA[<h3 id="生日画的贺图……-o"><a href="#生日画的贺图……-o" class="headerlink" title="生日画的贺图……^o^"></a>生日画的贺图……<em>^o^</em></h3><a id="more"></a>
+
+<p><img src="/2020/05/18/%E7%BA%AA%E5%BF%B5%E4%B8%8B%E8%87%AA%E5%B7%B1%E7%9A%8419%E5%B2%81%EF%BD%9E/%E7%94%9F%E6%97%A5%E8%B4%BA%E5%9B%BE.jpg" alt="生日贺图"></p>
+<p>第一个阳历农历重合的生日(´▽｀)，许的愿望是将来能成为大触( ̀⌄ ́)</p>
+]]></content>
+  </entry>
+  <entry>
     <title>进程调度模拟程序设计</title>
     <url>/2020/06/13/%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6%E6%A8%A1%E6%8B%9F%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</url>
     <content><![CDATA[<h3 id="进程调度模拟程序设计"><a href="#进程调度模拟程序设计" class="headerlink" title="进程调度模拟程序设计"></a>进程调度模拟程序设计</h3><p>题目简单来说，就是模拟按优先数调度算法实现处理器调度的程序，详细题目如下：</p>
@@ -632,14 +648,5 @@
       <categories>
         <category>homework</category>
       </categories>
-  </entry>
-  <entry>
-    <title>生日纪念～</title>
-    <url>/2020/05/18/%E7%BA%AA%E5%BF%B5%E4%B8%8B%E8%87%AA%E5%B7%B1%E7%9A%8419%E5%B2%81%EF%BD%9E/</url>
-    <content><![CDATA[<h3 id="生日画的贺图……-o"><a href="#生日画的贺图……-o" class="headerlink" title="生日画的贺图……^o^"></a>生日画的贺图……<em>^o^</em></h3><a id="more"></a>
-
-<p><img src="/2020/05/18/%E7%BA%AA%E5%BF%B5%E4%B8%8B%E8%87%AA%E5%B7%B1%E7%9A%8419%E5%B2%81%EF%BD%9E/%E7%94%9F%E6%97%A5%E8%B4%BA%E5%9B%BE.jpg" alt="生日贺图"></p>
-<p>第一个阳历农历重合的生日(´▽｀)，许的愿望是将来能成为大触( ̀⌄ ́)</p>
-]]></content>
   </entry>
 </search>
