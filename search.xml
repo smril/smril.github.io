@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>SNCtest</title>
-    <url>/2020/11/17/SNCtest/</url>
-    <content><![CDATA[<p>##SNCtest</p>
-<p>hello world!</p>
-]]></content>
-  </entry>
-  <entry>
     <title>hexo d后撤销，再次上传时失败解决办法</title>
     <url>/2020/06/12/hexo-d%E5%90%8E%E6%92%A4%E9%94%80%EF%BC%8C%E5%86%8D%E6%AC%A1%E4%B8%8A%E4%BC%A0%E6%97%B6%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
     <content><![CDATA[<p>在博客里添加下载功能，只需要在source中添加一个download文件夹，将文件放在里面，然后在博客中写：<br>[显示信息](\download\文件名) 即可</p>
