@@ -19,22 +19,20 @@
     var CONFIG = {"hostname":"smril.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="在博客里添加下载功能，只需要在source中添加一个download文件夹，将文件放在里面，然后在博客中写：[显示信息](\download\文件名) 即可">
+  <meta name="description" content="KMP算法详解KMP算法比朴素匹配好在哪呢？i不用回溯，j通常不用回溯到头，可以减少回溯到成本。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo d后撤销，再次上传时失败解决办法">
-<meta property="og:url" content="https://smril.com/2020/06/12/hexo-d%E5%90%8E%E6%92%A4%E9%94%80%EF%BC%8C%E5%86%8D%E6%AC%A1%E4%B8%8A%E4%BC%A0%E6%97%B6%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/index.html">
+<meta property="og:title" content="KMP算法详解">
+<meta property="og:url" content="https://smril.com/2021/07/05/KMP%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3/index.html">
 <meta property="og:site_name" content="smril&#39;s blog">
-<meta property="og:description" content="在博客里添加下载功能，只需要在source中添加一个download文件夹，将文件放在里面，然后在博客中写：[显示信息](\download\文件名) 即可">
+<meta property="og:description" content="KMP算法详解KMP算法比朴素匹配好在哪呢？i不用回溯，j通常不用回溯到头，可以减少回溯到成本。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://smril.com/2020/06/12/hexo-d%E5%90%8E%E6%92%A4%E9%94%80%EF%BC%8C%E5%86%8D%E6%AC%A1%E4%B8%8A%E4%BC%A0%E6%97%B6%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/ls.png">
-<meta property="article:published_time" content="2020-06-12T11:33:18.000Z">
-<meta property="article:modified_time" content="2020-06-12T11:47:23.982Z">
+<meta property="article:published_time" content="2021-07-05T03:11:38.404Z">
+<meta property="article:modified_time" content="2021-07-05T12:05:18.739Z">
 <meta property="article:author" content="smril">
 <meta property="article:tag" content="smril">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://smril.com/2020/06/12/hexo-d%E5%90%8E%E6%92%A4%E9%94%80%EF%BC%8C%E5%86%8D%E6%AC%A1%E4%B8%8A%E4%BC%A0%E6%97%B6%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/ls.png">
 
-<link rel="canonical" href="https://smril.com/2020/06/12/hexo-d%E5%90%8E%E6%92%A4%E9%94%80%EF%BC%8C%E5%86%8D%E6%AC%A1%E4%B8%8A%E4%BC%A0%E6%97%B6%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">
+<link rel="canonical" href="https://smril.com/2021/07/05/KMP%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3/">
 
 
 <script id="page-configurations">
@@ -47,7 +45,7 @@
   };
 </script>
 
-  <title>hexo d后撤销，再次上传时失败解决办法 | smril's blog</title>
+  <title>KMP算法详解 | smril's blog</title>
   
 
 
@@ -191,7 +189,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://smril.com/2020/06/12/hexo-d%E5%90%8E%E6%92%A4%E9%94%80%EF%BC%8C%E5%86%8D%E6%AC%A1%E4%B8%8A%E4%BC%A0%E6%97%B6%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">
+    <link itemprop="mainEntityOfPage" href="https://smril.com/2021/07/05/KMP%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/head.jpg">
@@ -204,7 +202,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          hexo d后撤销，再次上传时失败解决办法
+          KMP算法详解
         </h1>
 
         <div class="post-meta">
@@ -215,7 +213,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-06-12 19:33:18 / 修改时间：19:47:23" itemprop="dateCreated datePublished" datetime="2020-06-12T19:33:18+08:00">2020-06-12</time>
+              <time title="创建时间：2021-07-05 11:11:38 / 修改时间：20:05:18" itemprop="dateCreated datePublished" datetime="2021-07-05T11:11:38+08:00">2021-07-05</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -223,7 +221,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a>
+                  <a href="/categories/data-structure/" itemprop="url" rel="index"><span itemprop="name">data structure</span></a>
                 </span>
             </span>
 
@@ -238,13 +236,27 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>在博客里添加下载功能，只需要在source中添加一个download文件夹，将文件放在里面，然后在博客中写：<br>[显示信息](\download\文件名) 即可</p>
+        <h3 id="KMP算法详解"><a href="#KMP算法详解" class="headerlink" title="KMP算法详解"></a>KMP算法详解</h3><p>KMP算法比朴素匹配好在哪呢？i不用回溯，j通常不用回溯到头，可以减少回溯到成本。</p>
 <a id="more"></a>
-<p>但是如果上传中途失败或者撤销了，再次上传的时候有可能会报错，上网找了好久都没有找到解决办法，最后发现此时的hexo博客文件夹的大小与上传前备份的大小有很大的差异，刚好就是我没有上传成功的文件的大小，在finder中比较现在和备份的文件夹，发下大小都一致，说明是有一个隐藏的文件，我们只需要替换这个文件就好了。</p>
-<p>进入终端root模式，来到hexo博客目录下，ls展示,输入 du -sh ./文件名查看文件大小，最终得知罪魁祸首是.deploy_git,将这个文件用备份的替换掉即可</p>
-<p><img src="/2020/06/12/hexo-d%E5%90%8E%E6%92%A4%E9%94%80%EF%BC%8C%E5%86%8D%E6%AC%A1%E4%B8%8A%E4%BC%A0%E6%97%B6%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/ls.png" alt="目录展示"></p>
-<p>mv 备份文件 博客目录</p>
-<p>完</p>
+
+<h5 id="KMP算法原理"><a href="#KMP算法原理" class="headerlink" title="KMP算法原理"></a>KMP算法原理</h5><p>如一个串：abaabcac<br>这个为模式串，用这个串去匹配长字符串，随便写一个：abaccaabcabaababaabcacba<br>用朴素的模式匹配便是一次匹配不上往前移一个，再次匹配，这样暴力匹配的效率比较低，而且两个指针都需要回溯到最开始，比较消耗资源，KMP便是一个i指针（指被匹配串的指针）不用回溯，j指针通常不用回溯到头的算法。</p>
+<p>步骤如下：</p>
+<p>首先先正常匹配，现在前三位匹配上了<br>        a b a c c a a b c …<br>        a b a a a b c a c<br>第四位没匹配上，那么我们要回溯，首先i指针不用动，上面的串看到哪里就是哪里，我们只看下面的串，因为上面的串i前面的内容已经和下面的串匹配上了，相当于上面的串的信息记录到了下面的串（模式串）里，如上面是ab，下面也是ab，则我们只用知道下面的串就知道上面i前面的一定是ab。<br>j指针要回溯，回溯到哪里呢？<br>这时我们只看模式串，因为上面的信息也在模式串里，这时我们想要尽可能的往后推，因为这样算法会更快，那么我们能推多少位，就取决于主串没匹配上的字符前面的字符和模式串开头字符到底有多少位重合，如主串上没匹配的是c，前面是aba，从后往前看的子串有a, ba, 模式串匹配上的也是aba, 所以看模式串结尾和看主串结尾是一样的，我们只用看模式串就好了，接下来看模式串开头，子串为a, ab，我们发现主串的末尾和模式串的开头有一个a相同，所以我们就知道了有一个a相同，所以只能推两位，变为：<br>        a b a c c a a b c …<br>        ____a b a a a b c a c<br>试想如果一个相同的都没有，说明我们就算一个一个推，它也根本匹配不上，因为模式串未匹配上字符之前串的末尾（主串未匹配上字符之前串的末尾）根本就与开头不相同，那么意味这个i之前的串已经没有匹配上这个模式串的可能，这所以我们就可以一股脑的全推过去，效率大大增加。</p>
+<p>既然现在一个模式串就可以决定推几步（比如上面，有一个相同的a就知道模式串应该推到开头a的下一位），我们就用一个next数组算出模式串的每一个字符如果没匹配上，那么它应该推几步。</p>
+<h5 id="next数组计算"><a href="#next数组计算" class="headerlink" title="next数组计算"></a>next数组计算</h5><p>next数组记录了当前字符没匹配上的话，模式串应该回退到哪个位置，即模式串往前推多少，比如对比上面的例子，next[4]表示了现在模式串的第四位a没匹配上，那么next[4]应该等于1，为什么等于1呢？因为模式串的第1位为b(a第0位)，这个1的意思就是1之前的字符，即b之前的字符a，和没匹配位置之前的串一样，现在比如有这么个串：<br>        a b a c a b a    d<br>那么d的next值就应该是c的下标，即为3，因为c之前的串为aba,d之前的串也为aba（当然a也可以，但是我们要找最长的，否则会推的太放肆漏掉正确结果），这就意味着下一次可以直接用c去匹配d没有匹配上的字符，因为c和d前面都是一样的。</p>
+<p>那么abaaabcac这个串的next值就应该为：</p>
+<p>a b a a a b c a c<br>0 0 0 1 1 1 2 0 1</p>
+<p>这个next是不对的，因为第一位的下标是0，意味着第一位匹配不上的话还是回到第一位，这样的话就永远循环了，为什么呢？因为如果有这样的循环，说明没匹配上的字符前面根本没有相同的，所以我们要一股脑的全部推出去，即i++，这意味着主串终于变了。所以我们把它改写为这样：</p>
+<p>_a b a a a b c a c<br>-1 0 0 1 1 1 2 0 1</p>
+<p>这样next数组就计算完了，如果第一个a的下标为1的话就全部加一：011222312</p>
+<h5 id="代码解读："><a href="#代码解读：" class="headerlink" title="代码解读："></a>代码解读：</h5><p>网上流传有一个非常简洁但挺难懂的代码：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Getnext</span><span class="params">(<span class="keyword">int</span> next[],<span class="built_in">string</span> t)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> j = <span class="number">0</span>,k = <span class="number">-1</span>;</span><br><span class="line">    next[<span class="number">0</span>] = <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">while</span>(j&lt;t.length() - <span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(k == <span class="number">-1</span> || t[j] == t[k])</span><br><span class="line">        &#123;</span><br><span class="line">            j++;k++;</span><br><span class="line">            next[j] = k;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> k = next[k];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这段代码前面先讲next[0] = -1，原因和上面一样，然后先判断k是否等于-1，k就是指代的位置（下标），k = -1意味着是第一位，不用管是否相等直接往下一位匹配，从第二位开始，此时k = 0, 意味着没匹配上则从0下标位置开始匹配。t[k]不止代表了t[k]本身，还代表了k之前的字符也都匹配了，t[j]代表 正在计算字符 之前的字符，如果t[j] == t[k]，则意味着又一位匹配上了，首先我们把j和k都向前推一位，然后这个字符的next值就应该等于现在的k值，因为k代表了开头有多少位的字符和正在计算字符前的字符一样，我们假设if一直成立，比如aaaaaaa这个串，它的next数组的值为：-1 0 1 2 3 4 5。</p>
+<p>其实当t[j] == t[k] 时，就相当于t[j]前的k个字符（包括t[j]）可以被t[k]前的k个字符（包括t[k]）所替换。我们都是先计算好有多少个字符相等，然后把这个相等的数放到下一个字符的next里。</p>
+<p>但是如果没匹配上的话，就有一句k = next[k]，此时我们先不管后面的next值，我们先关注如何更新k值，首先现在的情况是失配了，那么就说明前k位字符已经和后面的不相等了，那么这么长的不相等，我们找一个短的试试，因为此时t[0]~t[k-1]还是和j前面的字符相等的，我们那么t[j]前的几个字符（不包括t[j]）就和t[k]前的几个字符(不包括t[k])一样，而next[k]代表了k之前的几个字符和开头的字符相等的个数，在这里刚好就是j之前的几个字符和开头的几个字符相等的个数，这个个数比当前的k小，所以我们是退而求其次找到了一个比k小的字符的数量来重新试验能不能匹配，能匹配就继续，不能匹配我们在找一个更小的，直到找到开头。</p>
+<p>实质上是比较当前字符的前面的字符向前和开头的字符向后的个数一样的数量，如果没匹配上的话就会测试一个更短的数量，这不一定能保证匹配，但一直找总会找到或者k = -1。</p>
+<h5 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h5><p>KMP算法—终于全部弄懂了  <a href="https://blog.csdn.net/dark_cy/article/details/88698736" target="_blank" rel="noopener">https://blog.csdn.net/dark_cy/article/details/88698736</a></p>
 
     </div>
 
@@ -260,13 +272,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/05/30/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%E5%85%AD-%E5%AE%8C/" rel="prev" title="数据库课程设计学习记录六(完)">
-      <i class="fa fa-chevron-left"></i> 数据库课程设计学习记录六(完)
+    <a href="/2020/10/11/openCV%E7%AC%94%E8%AE%B0%E2%80%94%E7%AC%AC%E4%B8%80%E8%AF%BE/" rel="prev" title="openCV笔记—第一课">
+      <i class="fa fa-chevron-left"></i> openCV笔记—第一课
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/06/13/%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6%E6%A8%A1%E6%8B%9F%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" rel="next" title="进程调度模拟程序设计">
-      进程调度模拟程序设计 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -325,6 +334,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#KMP算法详解"><span class="nav-number">1.</span> <span class="nav-text">KMP算法详解</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#KMP算法原理"><span class="nav-number">1.0.1.</span> <span class="nav-text">KMP算法原理</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#next数组计算"><span class="nav-number">1.0.2.</span> <span class="nav-text">next数组计算</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#代码解读："><span class="nav-number">1.0.3.</span> <span class="nav-text">代码解读：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#参考资料"><span class="nav-number">1.0.4.</span> <span class="nav-text">参考资料</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
